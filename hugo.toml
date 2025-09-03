@@ -33,7 +33,7 @@ tags = 'tags'
   googleAnalytics = "G-166982145" 
 
   [params.social]
-    discord = "https://discord.gg/your-invite-code"
+    discord = "https://discord.gg/usydANvKqD"
     twitter = "https://x.com/your-twitter-handle"
     youtube = "https://youtube.com/your-channel"
     github = "https://github.com/MemMachine/MemMachine"
@@ -119,7 +119,7 @@ tags = 'tags'
 
   [[menus.footerCommunity]]
     name = 'Discord'
-    url = 'https://discord.gg/yourdiscordinvite'
+    url = 'https://discord.gg/usydANvKqD'
     weight = 30
     [menus.footerCommunity.params]
       icon = "discord"
