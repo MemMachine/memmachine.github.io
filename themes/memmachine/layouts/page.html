@@ -1,0 +1,85 @@
+{{ define "main" }}
+  <!--=======================================================
+                        HERO
+  =========================================================-->
+  <div class="blog-d-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="blog-d-hero">
+
+            {{ $featuredImage := "" }}
+            {{ with .Params.featured_image }}
+              {{ $featuredImage = $.Resources.Get . }}
+            {{ end }}
+
+            {{ if $featuredImage }}
+              <img src="{{ $featuredImage.RelPermalink }}" alt="{{ $.Title }}" data-aos="fade-up" data-aos-duration="1000" />
+            {{ else }}
+              <img src="{{ `/img/blog-details.png` | relURL }}" alt="{{ $.Title }}" data-aos="fade-up" data-aos-duration="1000" />
+            {{ end }}
+            
+            <div data-aos="fade-up" data-aos-duration="1000">
+              {{ with .Params.categories }}
+                {{ range first 1 . }}
+                  <a href="{{ `/categories/` | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                {{ end }}
+              {{ end }}
+            </div>
+            
+            <h2 data-aos="fade-up" data-aos-duration="1000">{{ .Title }}</h2>
+            
+            <div class="card-date" style="margin-bottom: 0" data-aos="fade-up" data-aos-duration="1000">
+              {{ with .Params.authors }}
+                {{ range . }}
+                  <h6><a href="{{ `/authors/` | relLangURL }}{{ . | urlize }}">{{ . }}</a></h6>
+                {{ end }}
+              {{ end }}
+              <svg width="2" height="2" viewBox="0 0 2 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.374 1.862C1.194 1.862 1.04 1.802 0.912 1.682C0.784 1.558 0.72 1.404 0.72 1.22C0.72 1.036 0.784 0.884 0.912 0.764C1.04 0.64 1.194 0.578 1.374 0.578C1.546 0.578 1.692 0.64 1.812 0.764C1.936 0.884 1.998 1.036 1.998 1.22C1.998 1.404 1.936 1.558 1.812 1.682C1.692 1.802 1.546 1.862 1.374 1.862Z" fill="#A6A6C9"/></svg>
+              <p style="margin: 0">{{ .Date.Format "January 2, 2006" }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--=======================================================
+                        BLOG
+  =========================================================-->
+  <div class="blog-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="blog-content">
+            <div class="blog-text">
+              {{ .Content }}
+              
+              <div class="social" data-aos="fade-up" data-aos-duration="1000">
+                <div class="social-btn">
+                  {{ with .Params.tags }}
+                    {{ range . }}
+                      <a href="{{ `/tags/` | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                    {{ end }}
+                  {{ end }}
+                </div>
+                <div class="social-icon" data-aos="fade-up" data-aos-duration="1000">
+                  <span>Share on Social</span>
+                  <div class="icon">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" rel="noopener"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 3H4C3.73478 3 3.48043 3.10536 3.29289 3.29289C3.10536 3.48043 3 3.73478 3 4V20C3 20.2652 3.10536 20.5196 3.29289 20.7071C3.48043 20.8946 3.73478 21 4 21H12.615V14.04H10.277V11.315H12.615V9.315C12.615 6.99 14.035 5.723 16.115 5.723C16.814 5.721 17.514 5.757 18.21 5.83V8.25H16.775C15.647 8.25 15.427 8.788 15.427 9.575V11.31H18.124L17.774 14.035H15.426V21H20C20.2652 21 20.5196 20.8946 20.7071 20.7071C20.8946 20.5196 21 20.2652 21 20V4C21 3.73478 20.8946 3.48043 20.7071 3.29289C20.5196 3.10536 20.2652 3 20 3Z" fill="#A6A6C9"/></svg></a>
+                    <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}" target="_blank" rel="noopener"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.633 7.99656C19.646 8.17156 19.646 8.34556 19.646 8.51956C19.646 13.8446 15.593 19.9806 8.186 19.9806C5.904 19.9806 3.784 19.3196 2 18.1716C2.324 18.2086 2.636 18.2216 2.973 18.2216C4.78599 18.2259 6.54765 17.6197 7.974 16.5006C7.13342 16.4853 6.31858 16.208 5.64324 15.7073C4.9679 15.2066 4.46578 14.5075 4.207 13.7076C4.456 13.7446 4.706 13.7696 4.968 13.7696C5.329 13.7696 5.692 13.7196 6.029 13.6326C5.11676 13.4484 4.29647 12.9539 3.70762 12.2332C3.11876 11.5126 2.79769 10.6102 2.799 9.67956V9.62956C3.336 9.92856 3.959 10.1156 4.619 10.1406C4.06609 9.77314 3.61272 9.27458 3.29934 8.68935C2.98596 8.10411 2.82231 7.45041 2.823 6.78656C2.823 6.03856 3.022 5.35256 3.371 4.75456C4.38314 5.99958 5.6455 7.01812 7.07634 7.74421C8.50717 8.47031 10.0746 8.88777 11.677 8.96956C11.615 8.66956 11.577 8.35855 11.577 8.04656C11.5767 7.51752 11.6807 6.99361 11.8831 6.5048C12.0854 6.01598 12.3821 5.57183 12.7562 5.19774C13.1303 4.82366 13.5744 4.52697 14.0632 4.32463C14.5521 4.1223 15.076 4.01829 15.605 4.01856C16.765 4.01856 17.812 4.50455 18.548 5.29056C19.4498 5.11617 20.3145 4.78698 21.104 4.31755C20.8034 5.24837 20.1738 6.03766 19.333 6.53756C20.1328 6.44633 20.9144 6.23601 21.652 5.91356C21.1011 6.71665 20.4185 7.4209 19.633 7.99656Z" fill="#A6A6C9"/></svg></a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title }}" target="_blank" rel="noopener"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.98292 7.19729C6.19132 7.19729 7.17092 6.21769 7.17092 5.00929C7.17092 3.80089 6.19132 2.82129 4.98292 2.82129C3.77452 2.82129 2.79492 3.80089 2.79492 5.00929C2.79492 6.21769 3.77452 7.19729 4.98292 7.19729Z" fill="#A6A6C9"/><path d="M9.23575 8.85469V20.9937H13.0047V14.9907C13.0047 13.4067 13.3027 11.8727 15.2667 11.8727C17.2037 11.8727 17.2277 13.6837 17.2277 15.0907V20.9947H20.9988V14.3377C20.9988 11.0677 20.2948 8.55469 16.4728 8.55469C14.6378 8.55469 13.4078 9.56169 12.9047 10.5147H12.8537V8.85469H9.23575ZM3.09375 8.85469H6.86875V20.9937H3.09375V8.85469Z" fill="#A6A6C9"/></svg></a>
+                    <a href="mailto:?subject={{ .Title }}&body=Check out this article: {{ .Permalink }}" target="_blank" rel="noopener"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V18C2 18.5304 2.21071 19.0391 2.58579 19.4142C2.96086 19.7893 3.46957 20 4 20H20C20.5304 20 21.0391 19.7893 21.4142 19.4142C21.7893 19.0391 22 18.5304 22 18V6C22 5.46957 21.7893 4.96086 21.4142 4.58579C21.0391 4.21071 20.5304 4 20 4ZM20 8.7L12 14.034L4 8.7V6.297L12 11.63L20 6.297V8.7Z" fill="#A6A6C9"/></svg></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          {{ partial "blog-sidebar.html" . }}
+        </div>
+      </div>
+    </div>
+  </div>
+{{ end }}

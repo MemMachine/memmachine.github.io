@@ -1,0 +1,78 @@
+<!--=======================================================
+                          FOOTER
+=========================================================-->
+<div class="container">
+  <div class="row gy-4">
+    <div class="col-md-6">
+      <img src="{{ `/img/logo.svg` | relURL }}" alt="logo" width="300px"/>
+      <p>
+        MemMachine unlocks persistent, multi-session memory for AI agents—powering personalized, context-rich experiences you fully control, open-source and built for developers.
+      </p>
+    </div>
+    <div class="col-md-6">
+      <div class="row gy-4">
+        {{- with site.Menus.footerproduct }}
+        <div class="col-md-4">
+          <div class="footer-item">
+            <h2>Product</h2>
+            <ul>
+              {{- range . }}
+              <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+              {{- end }}
+            </ul>
+          </div>
+        </div>
+        {{- end }}
+        {{- with site.Menus.footercompany }}
+        <div class="col-md-4">
+          <div class="footer-item">
+            <h2>Company</h2>
+            <ul>
+              {{- range . }}
+              <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+              {{- end }}
+            </ul>
+          </div>
+        </div>
+        {{- end }}
+        {{- with site.Menus.footercommunity }}
+        <div class="col-md-4">
+          <div class="footer-item">
+            <h2>Community</h2>
+            <ul>
+              {{- range . }}
+              <li>
+                <a href="{{ .URL }}" target="_blank" rel="noopener">
+                  {{- with .Params.icon }}
+                  <i class="fab fa-{{ . }}" aria-hidden="true"></i> 
+                  {{- end }}
+                  {{ .Name }}
+                </a>
+              </li>
+              {{- end }}
+            </ul>
+          </div>
+        </div>
+        {{- end }}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer-copyright">
+  <div class="container">
+    <div class="row gy-2">
+      <div class="col-md-6 align-self-center">
+        <p>Copyright © {{ now.Year }} {{ site.Title }}. All rights reserved.</p>
+      </div>
+      <div class="col-md-6">
+        <ul>
+          {{- with site.Menus.legal }}
+            {{- range . }}
+            <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+            {{- end }}
+          {{- end }}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

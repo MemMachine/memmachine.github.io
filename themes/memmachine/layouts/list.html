@@ -1,0 +1,50 @@
+{{ define "main" }}
+
+<div class="hero-area" style="padding: 96px 0">
+  <div class="container">
+    <div data-aos="fade-up" data-aos-duration="1000">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="title">
+            <span>{{ .Title }}</span>
+          </h1>
+          <div class="mx-850 text-center">
+            {{ .Content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="featured-area">
+  <div class="container">
+    <div class="row">
+      <!--
+      <div class="col-md-12">
+        <h2 class="title-2" data-aos="fade-up" data-aos-duration="1000">
+          Explore Our Top <span>Featured Blogs</span>
+        </h2>
+      </div>
+      -->
+
+      <div class="insight-cards">
+        <div class="row">
+          {{/* Paginate the pages within the current section */}}
+          {{ $paginator := .Paginate .RegularPages }}
+          {{ range $paginator.Pages }}
+          <div class="col-md-12 col-sm-12 col-lg-6" style="margin-bottom: 48px">
+            {{ partial "blog-card.html" . }}
+          </div>
+          {{ end }}
+
+          {{ partial "pagination.html" . }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{/* partial "ready-section.html" . */}}
+
+{{ end }}

@@ -1,0 +1,24 @@
+- title: LangChain
+  icon: "fa-solid fa-link"
+  text: "Enhance existing LangChain agents by equipping them with MemMachine's advanced long-term and personalization memory."
+  url: "#"
+
+- title: LangGraph
+  icon: "fa-solid fa-hexagon-nodes"
+  text: "Build complex, stateful agentic systems. MemMachine provides the persistent memory layer that your graphs need to remember states across conversations."
+  url: "#"
+
+- title: LlamaIndex
+  icon: "fa-solid fa-book-bookmark"
+  text: "Enhance your existing RAG applications with MemMachine to improve memory and context awareness."
+  url: "#"
+  
+- title: Google AI ADK
+  icon: "fa-brands fa-google"
+  text: "Deploy personalized AI agents within your Google Workspace applications."
+  url: "#"
+
+- title: Coming Soon
+  icon: "fa-solid fa-person-digging"
+  text: "We are working hard to add more integrations, so please let us know which framework you use."
+  url: "https://github.com/MemMachine/MemMachine/issues"

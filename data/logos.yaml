@@ -1,0 +1,29 @@
+- name: Microsoft
+  src: /img/logos/microsoft.svg
+
+- name: Google
+  src: /img/logos/google.svg
+
+- name: Amazon Web Services
+  src: /img/logos/aws.svg
+
+- name: Notion
+  src: /img/logos/notion.svg
+
+- name: Slack
+  src: /img/logos/slack.svg
+
+- name: LangChain
+  src: /img/logos/langchain.svg
+
+- name: NVIDIA
+  src: /img/logos/nvidia.svg
+
+- name: Hugging Face
+  src: /img/logos/huggingface.svg
+
+- name: Meta
+  src: /img/logos/meta.svg
+
+- name: OpenAI
+  src: /img/logos/OpenAI-white-wordmark.svg

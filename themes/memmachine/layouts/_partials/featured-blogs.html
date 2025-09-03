@@ -1,0 +1,58 @@
+<div class="featured-area mtb-192">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="title-2" data-aos="fade-up" data-aos-duration="1000">
+          Featured <span>Blog Posts</span>
+        </h2>
+      </div>
+    </div>
+    <div class="insight-cards">
+      <div class="row">
+        {{/* --- Hugo Post Fetching Logic (Robust Version) --- */}}
+
+        {{/* 1. Get all pages from the "blog" section */}}
+        {{ $all_blog_posts := where site.RegularPages "Section" "blog" }}
+
+        {{/* 2. Create an empty list to hold only posts that have tags */}}
+        {{ $posts_with_tags := slice }}
+        {{ range $all_blog_posts }}
+          {{ if isset .Params "tags" }}
+            {{ $posts_with_tags = $posts_with_tags | append . }}
+          {{ end }}
+        {{ end }}
+
+        {{/* 3. Now, safely search for "featured" posts only within the list of posts that have tags */}}
+        {{ $featured_posts := where $posts_with_tags ".Params.tags" "intersect" (slice "featured") | first 2 }}
+
+        {{/* 4. Set the posts to be displayed, starting with the featured ones */}}
+        {{ $posts_to_display := $featured_posts }}
+
+        {{/* 5. If we found fewer than 2 featured posts, fall back to the 2 latest posts overall */}}
+        {{ if lt (len $featured_posts) 2 }}
+          {{ $posts_to_display = $all_blog_posts | first 2 }}
+        {{ end }}
+        
+        {{/* --- End Logic --- */}}
+
+        {{ range $posts_to_display }}
+          <div class="col-md-12 col-sm-12 col-lg-6" style="margin-bottom: 48px">
+            {{ partial "blog-card.html" . }}
+          </div>
+        {{ else }}
+          <div class="col-md-12 text-center">
+            <p>No blog posts found. Check back soon for updates!</p>
+          </div>
+        {{ end }}
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <a href="{{ "/blog" | relURL }}" class="btn btn-primary">View All Posts</a>
+      </div>
+    </div>
+
+  </div>
+</div>

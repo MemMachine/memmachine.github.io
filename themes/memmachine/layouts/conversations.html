@@ -1,0 +1,178 @@
+{{ define "main" }}
+  <!--=======================================================
+                        HERO
+  =========================================================-->
+  <div class="hero-area pb-96">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="title">
+              {{ .Title }}
+            </h1>
+            <p class="mx-850 text-center">
+              {{ .Content }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--=======================================================
+                          TAGS
+  =========================================================-->
+  <div class="tags-main-area">
+    <div class="tags-area" data-aos="fade-up" data-aos-duration="1000">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Tags</h2>
+            <ul>
+              <li><a href="#">Marketing</a></li>
+              <li><a href="#">HR</a></li>
+              <li><a href="#">Customer Support</a></li>
+              <li><a href="#">Supply Chain & Logistics</a></li>
+              <li><a href="#">Product</a></li>
+              <li><a href="#">Sales</a></li>
+              <li><a href="#">Operations</a></li>
+              <li><a href="#">Engineering</a></li>
+              <li><a href="#">Legal</a></li>
+              <li><a href="#">Finance & Marketing</a></li>
+              <li><a href="#">Administration</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tags-area" data-aos="fade-up" data-aos-duration="1000">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Integrations</h2>
+            <ul>
+              <li><a href="#">Shopify</a></li>
+              <li><a href="#">Excel</a></li>
+              <li><a href="#">Gmail</a></li>
+              <li><a href="#">Zendesk</a></li>
+              <li><a href="#">Jira</a></li>
+              <li><a href="#">Coda</a></li>
+              <li><a href="#">Calendly</a></li>
+              <li><a href="#">Mailchimp</a></li>
+              <li><a href="#">Typeform</a></li>
+              <li><a href="#">Notion</a></li>
+              <li><a href="#">Google Docs</a></li>
+              <li><a href="#">Airtable</a></li>
+              <li><a href="#">Google Sheets</a></li>
+              <li><a href="#">Stripe</a></li>
+              <li><a href="#">Google Calendar</a></li>
+              <li><a href="#">Google Analytics</a></li>
+              <li><a href="#">Github</a></li>
+              <li><a href="#">Intercom</a></li>
+              <li><a href="#">Google Contacts</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--=======================================================
+                          SOLUTION
+  =========================================================-->
+  <div class="solution-area mb-192">
+    <div class="container">
+      <div class="row" data-aos="fade-up" data-aos-duration="1000">
+        <div class="col-md-12">
+          <div class="solution-item">
+            <div class="row align-items-center">
+              <div class="col-md-6 pr-47">
+                <div class="solution-item-list">
+                  <div class="solution-chat-message">
+                    <div class="solution-chat-message-item">
+                      <img src="{{ `/img/user.svg` | relURL }}" alt="user" />
+                      <div class="solution-chat-message-item-content">
+                        <h3>You <span>1:11 PM</span></h3>
+                        <p>
+                          What is the current total inventory value for the
+                          Salad serving set?
+                        </p>
+                      </div>
+                    </div>
+                    <div class="solution-chat-message-item">
+                      <img src="{{ `/img/user-assistify.svg` | relURL }}" alt="user" />
+                      <div class="solution-chat-message-item-content">
+                        <h3>Assistify AI <span>8:42 PM</span></h3>
+                        <p>
+                          The current total inventory value for the Salad
+                          Serving Set is $1799.10.
+                        </p>
+                        <p>Calculation:</p>
+                        <ol>
+                          <li>Price per unit: $19.99</li>
+                          <li>Available units: 90</li>
+                          <li>
+                            Inventory value = Price per unit * Available units
+                          </li>
+                          <li>Inventory Total = $1$1799.10</li>
+                          <li>Inventory value = $19.99 * 90 = $1799.10</li>
+                        </ol>
+                      </div>
+                    </div>
+                    <div class="hero-chat-input">
+                      <input type="text" placeholder="Type your message" />
+                      <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><mask id="mask0_83_965" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24"><rect width="24" height="24" fill="#D9D9D9"></rect></mask><g mask="url(#mask0_83_965)"><path d="M3 20V14L11 12L3 10V4L22 12L3 20Z" fill="url(#paint0_linear_83_965)"></path></g><defs><linearGradient id="paint0_linear_83_965" x1="3" y1="4" x2="24.0458" y2="7.42352" gradientUnits="userSpaceOnUse"><stop stop-color="#A570FF"></stop><stop offset="0.500005" stop-color="#FF6EB2"></stop><stop offset="1" stop-color="#FFAD66"></stop></linearGradient></defs></svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 pl-47 mt-30">
+                <div class="solution-item-list">
+                  <div class="solution-single">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12.0005" r="11.5" fill="#3D2C5C" stroke="#493872"></circle><mask id="mask0_611_2047" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="4" y="4" width="24" height="25"><rect x="4" y="4.00049" width="24" height="24" fill="#D9D9D9"></rect></mask><g mask="url(#mask0_611_2047)"><path d="M10.3667 16.1283L6.43915 12.2007L7.52066 11.1192L10.3667 13.9652L16.4794 7.85254L17.5609 8.93406L10.3667 16.1283Z" fill="#CCCCE0"></path></g></svg>
+                    <div>
+                      <h4>Marketing</h4>
+                      <p>Chat assistant for the marketing & paid ads team.</p>
+                    </div>
+                  </div>
+                  <div class="solution-single">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12.0005" r="11.5" fill="#3D2C5C" stroke="#493872"></circle><mask id="mask0_611_2047" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="4" y="4" width="24" height="25"><rect x="4" y="4.00049" width="24" height="24" fill="#D9D9D9"></rect></mask><g mask="url(#mask0_611_2047)"><path d="M10.3667 16.1283L6.43915 12.2007L7.52066 11.1192L10.3667 13.9652L16.4794 7.85254L17.5609 8.93406L10.3667 16.1283Z" fill="#CCCCE0"></path></g></svg>
+                    <div>
+                      <h4>Sales</h4>
+                      <p>
+                        What was the revenue generated during the Black
+                        Friday?
+                      </p>
+                    </div>
+                  </div>
+                  <div class="solution-single">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12.0005" r="11.5" fill="#3D2C5C" stroke="#493872"></circle><mask id="mask0_611_2047" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="4" y="4" width="24" height="25"><rect x="4" y="4.00049" width="24" height="24" fill="#D9D9D9"></rect></mask><g mask="url(#mask0_611_2047)"><path d="M10.3667 16.1283L6.43915 12.2007L7.52066 11.1192L10.3667 13.9652L16.4794 7.85254L17.5609 8.93406L10.3667 16.1283Z" fill="#CCCCE0"></path></g></svg>
+                    <div>
+                      <h4>Finance</h4>
+                      <p>
+                        Chat assistant for the Finance & Accounting teams.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="solution-single">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12.0005" r="11.5" fill="#3D2C5C" stroke="#493872"></circle><mask id="mask0_611_2047" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="4" y="4" width="24" height="25"><rect x="4" y="4.00049" width="24" height="24" fill="#D9D9D9"></rect></mask><g mask="url(#mask0_611_2047)"><path d="M10.3667 16.1283L6.43915 12.2007L7.52066 11.1192L10.3667 13.9652L16.4794 7.85254L17.5609 8.93406L10.3667 16.1283Z" fill="#CCCCE0"></path></g></svg>
+                    <div>
+                      <h4>Engineering</h4>
+                      <p>
+                        Chat assistant for the Product & engineering teams.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--=======================================================
+                          NEWSLETTER
+  =========================================================-->
+  {{ partial "ready-section.html" . }}
+{{ end }}

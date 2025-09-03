@@ -1,0 +1,141 @@
+baseURL = 'https://memmachine.ai/'
+languageCode = 'en-us'
+title = 'MemMachine'
+theme = 'memmachine'
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
+[permalinks]
+blogs = "/blog/:year/:month/:title/"
+
+[languages]
+
+[languages.en]
+languageName = "English"
+weight = 1
+contentDir = "content/en"
+
+[languages.zh]
+languageName = "中文"
+languageCode = "zh"
+weight = 1
+contentDir = "content/zh"
+
+# Add this section to register the 'authors' taxonomy
+[taxonomies]
+authors = 'authors'
+categories = 'categories'
+tags = 'tags'
+
+[params]
+  # Your Google Analytics ID (e.g., "G-XXXXXXXXXX")
+  googleAnalytics = "G-166982145" 
+
+  [params.social]
+    discord = "https://discord.gg/your-invite-code"
+    twitter = "https://x.com/your-twitter-handle"
+    youtube = "https://youtube.com/your-channel"
+    github = "https://github.com/MemMachine/MemMachine"
+    github_issues = "https://github.com/MemMachine/MemMachine/issues"
+
+[menus]
+  [[menus.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
+
+  [[menus.main]]
+    name = 'Examples'
+    pageRef = '/examples'
+    weight = 20
+
+  [[menus.main]]
+    name = 'Integrations'
+    pageRef = '/integrations'
+    weight = 30
+
+  # [[menus.main]]
+  #  name = 'Pricing'
+  #  pageRef = '/pricing'
+  #  weight = 40
+
+  [[menus.main]]
+   name = 'Community'
+   pageRef = '/community'
+   weight = 50
+
+  [[menus.main]]
+    name = 'Blog'
+    pageRef = '/blog'
+    weight = 50
+
+  # Footer Product menu
+  [[menus.footerProduct]]
+    name = 'Examples'
+    pageRef = '/examples'
+    weight = 10
+
+  [[menus.footerProduct]]
+    name = 'Integrations'
+    pageRef = '/integrations'
+    weight = 20
+
+  [[menus.footerProduct]]
+    name = 'Blog'
+    pageRef = '/blog'
+    weight = 30
+
+  # Footer Company menu
+  [[menus.footerCompany]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
+
+  # [[menus.footerCompany]]
+  #  name = 'Pricing'
+  #  pageRef = '/pricing'
+  #  weight = 20
+
+  # [[menus.footerCompany]]
+  #  name = 'Contact'
+  #  pageRef = '/contact'
+  #  weight = 30
+
+  # Footer Community menu
+  [[menus.footerCommunity]]
+    name = 'Twitter/X'
+    url = 'https://twitter.com/memmachineai'
+    weight = 10
+    [menus.footerCommunity.params]
+      icon = "twitter"
+
+  [[menus.footerCommunity]]
+    name = 'Github'
+    url = 'https://github.com/MemMachine/MemMachine'
+    weight = 20
+    [menus.footerCommunity.params]
+      icon = "github"
+
+  [[menus.footerCommunity]]
+    name = 'Discord'
+    url = 'https://discord.gg/yourdiscordinvite'
+    weight = 30
+    [menus.footerCommunity.params]
+      icon = "discord"
+
+  # Footer Legal menu
+  [[menus.legal]]
+    name = 'Terms of Service'
+    pageRef = '/terms-of-service'
+    weight = 10
+
+  [[menus.legal]]
+    name = 'Privacy Policy'
+    pageRef = '/privacy-policy'
+    weight = 20
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = '0.146.0'

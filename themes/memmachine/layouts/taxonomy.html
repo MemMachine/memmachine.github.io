@@ -1,0 +1,57 @@
+{{ define "main" }}
+  <!--=======================================================
+                        HERO
+  =========================================================-->
+  <div class="hero-area p-96">
+    <div class="container">
+      <div data-aos="fade-up" data-aos-duration="1000">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="title">
+              All
+              <span>{{ .Title }}</span>
+            </h1>
+            <p class="mx-850 text-center">
+              Browse all available {{ .Title | lower }}.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--=======================================================
+                        TERMS LIST
+  =========================================================-->
+  <div class="insights-area">
+    <div class="container" data-aos="fade-up" data-aos-duration="1000">
+      <div class="insight-cards pt-96">
+        <div class="row">
+          <div class="col-md-12">
+            <ul>
+              {{/*
+                This robustly loops through the terms (e.g., categories, authors).
+                It iterates over the map of terms provided by .Data.Terms.
+              */}}
+              {{ range $name, $taxonomy := .Data.Terms }}
+                <li style="margin-bottom: 1rem;">
+                  {{/* Manually construct the URL for each term's page */}}
+                  <a href="{{ (printf "/%s/%s" $.Data.Plural $name) | relLangURL }}" class="card-title" style="font-size: 24px;">
+                    {{/* Capitalize the term name and show the post count */}}
+                    {{ $name | humanize }} ({{ len $taxonomy.Pages }})
+                  </a>
+                </li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--=======================================================
+                        NEWSLETTER
+  =========================================================-->
+  {{ partial "ready-section.html" . }}
+
+{{ end }}

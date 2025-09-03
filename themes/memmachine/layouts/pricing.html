@@ -1,0 +1,27 @@
+{{ define "main" }}
+  <!--=======================================================
+                        HERO
+  =========================================================-->
+  <div class="hero-area">
+    <div class="container">
+      <div data-aos="fade-up" data-aos-duration="1000">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="title">
+              {{ .Title }}
+            </h1>
+            <div class="mx-850 text-center">
+              {{ .Content }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{ partial "pricing-table.html" . }}
+  {{ partial "faq.html" . }}
+  {{ partial "brand-logos.html" . }}
+  {{ partial "ready-section.html" . }}
+
+{{ end }}
