@@ -1,0 +1,152 @@
+{{ define "main" }}
+  <!--=======================================================
+                        HERO
+  =========================================================-->
+  <div class="hero-area">
+    <div class="container">
+      <div data-aos="fade-up" data-aos-duration="1000">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="title">
+              {{ .Title }}
+            </h1>
+            <div class="mx-850 text-center">
+              {{ .Content }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--=======================================================
+                          SOLUTION
+  =========================================================-->
+  <div class="solution-area mtb-192">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div data-aos="fade-up" data-aos-duration="1000">
+            <h2 class="title-2">
+              Boost with All-Knowing <span>AI Assistant</span>
+            </h2>
+          </div>
+        </div>
+        <div class="col-md-12">
+          {{/* Data for the example sections */}}
+          {{ $examples := slice
+            (dict 
+              "title" "Financial Management & Accounting" 
+              "text" "Gain immediate access to financial data, accounting records, and tax information from various sources by simply asking your assistant. Save valuable time and eliminate hassle effortlessly."
+              "chat_html" `
+                <div class="solution-chat-message-item">
+                  <img src="/img/user.svg" alt="user" />
+                  <div class="solution-chat-message-item-content">
+                    <h3>You <span>1:11 PM</span></h3>
+                    <p>List all the open balances for our B2B customers in Excel.</p>
+                  </div>
+                </div>
+                <div class="solution-chat-message-item">
+                  <img src="/img/user-assistify.svg" alt="user" />
+                  <div class="solution-chat-message-item-content">
+                    <h3>MemMachine Agent <span>8:42 PM</span></h3>
+                    <p>Based on the additional data, here are the open balances for our B2B customers in Excel:</p>
+                    <ol>
+                      <li>ABC Corporation: $5000</li>
+                      <li>XYZ Ltd.: $1500</li>
+                      <li>Acme Industries: $8000</li>
+                      <li>BigCo Inc.: $500</li>
+                      <li>Global Traders: $2000</li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="solution-chat-message-item">
+                  <img src="/img/user.svg" alt="user" />
+                  <div class="solution-chat-message-item-content">
+                    <h3>You <span>8:42 PM</span></h3>
+                    <p>Can you list each order with the collected tax?</p>
+                  </div>
+                </div>
+              `
+              "orientation" "left"
+            )
+            (dict 
+              "title" "Strategic Marketing Solutions" 
+              "text" "Drafting a newsletter to announce new products to your customers is a breeze, taking only a few seconds. Plus, feel free to request as many revisions as you'd like!"
+              "chat_html" `
+                <div class="solution-chat-message-item">
+                  <img src="/img/user.svg" alt="user" />
+                  <div class="solution-chat-message-item-content">
+                    <h3>You <span>1:11 PM</span></h3>
+                    <p>Is our Honey BBQ Beef Jerky Organic?</p>
+                  </div>
+                </div>
+                <div class="solution-chat-message-item">
+                  <img src="/img/user-assistify.svg" alt="user" />
+                  <div class="solution-chat-message-item-content">
+                    <h3>MemMachine Agent <span>8:42 PM</span></h3>
+                    <p>Yes, our Honey BBQ Beef Jerky is organic.</p>
+                  </div>
+                </div>
+                <div class="solution-chat-message-item">
+                  <img src="/img/user.svg" alt="user" />
+                  <div class="solution-chat-message-item-content">
+                    <h3>You <span>8:42 PM</span></h3>
+                    <p>Thanks! what other jerky is organic?</p>
+                  </div>
+                </div>
+                <div class="solution-chat-message-item">
+                  <img src="/img/user-assistify.svg" alt="user" />
+                  <div class="solution-chat-message-item-content">
+                    <h3>MemMachine Agent <span>8:42 PM</span></h3>
+                    <p>The Teriyaki Beef Jerky and the Black Pepper Beef Jerky are also organic.</p>
+                  </div>
+                </div>
+              `
+              "orientation" "right"
+            )
+          }}
+
+          {{ range $examples }}
+            <div class="solution-item" data-aos="fade-up" data-aos-duration="1000">
+              <div class="row align-items-center">
+                {{ if eq .orientation "left" }}
+                  <div class="col-md-6 pr-47">
+                    <div class="solution-item-list">
+                      <div class="solution-chat-message">{{ .chat_html | safeHTML }}</div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 pl-47 mt-30">
+                    <h3>{{ .title }}</h3>
+                    <p>{{ .text }}</p>
+                    <a href="{{ `/conversations` | relLangURL }}" class="btn btn-secondary">More examples</a>
+                  </div>
+                {{ else }}
+                  <div class="col-md-6 pr-47">
+                    <h3>{{ .title }}</h3>
+                    <p>{{ .text }}</p>
+                    <a href="{{ `/conversations` | relLangURL }}" class="btn btn-secondary">More examples</a>
+                  </div>
+                  <div class="col-md-6 pl-47 mt-30">
+                    <div class="solution-item-list">
+                      <div class="solution-chat-message">{{ .chat_html | safeHTML }}</div>
+                    </div>
+                  </div>
+                {{ end }}
+              </div>
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--=======================================================
+                          BRAND
+  =========================================================-->
+  {{ partial "brand-logos.html" . }}
+  <!--=======================================================
+                          NEWSLETTER
+  =========================================================-->
+  <div class="container mt-192">
+    {{ partial "ready-section.html" . }}
+  </div>
+{{ end }}

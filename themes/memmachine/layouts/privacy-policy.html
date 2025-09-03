@@ -1,0 +1,63 @@
+{{ define "main" }}
+  <!--=======================================================
+                        HERO
+  =========================================================-->
+  <div class="hero-area">
+    <div class="container">
+      <div data-aos="fade-up" data-aos-duration="1000">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="title">
+              {{ .Title }}
+            </h1>
+            <p class="mx-850 text-center">
+              {{ .Params.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--=======================================================
+                          POLICY
+  =========================================================-->
+  <div class="policy-area mt-192">
+    <div class="container" data-aos="fade-up" data-aos-duration="1000">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="pills-tab" role="tablist" aria-orientation="vertical">
+            {{ range $index, $section := .Params.policy_sections }}
+              <button
+                class="nav-link {{ if eq $index 0 }}active{{ end }}"
+                data-bs-toggle="pill"
+                data-bs-target="#pill-{{ $index }}"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
+                {{ $section.title }}
+              </button>
+            {{ end }}
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="tab-content">
+            {{ range $index, $section := .Params.policy_sections }}
+              <div
+                class="tab-pane fade {{ if eq $index 0 }}show active{{ end }}"
+                id="pill-{{ $index }}"
+                role="tabpanel"
+              >
+                <h3 data-aos="fade-up" data-aos-duration="1000">
+                  {{ $section.title }}
+                </h3>
+                <div data-aos="fade-up" data-aos-duration="1000">
+                  {{ $section.content | safeHTML }}
+                </div>
+              </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{ end }}

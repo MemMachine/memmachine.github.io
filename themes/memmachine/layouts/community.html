@@ -1,0 +1,141 @@
+{{ define "main" }}
+  <!--=======================================================
+                        HERO
+  =========================================================-->
+  <div class="hero-area">
+    <div class="container">
+      <div data-aos="fade-up" data-aos-duration="1000">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="title">
+              {{ .Title }}
+            </h1>
+            <div class="mx-850 text-center">
+              {{ .Content }}
+            </div>
+            {{/* Check if the Discord URL is set in hugo.toml */}}
+            {{ with .Site.Params.social.discord }}
+            <div class="text-center mt-4">
+                <a href="{{ . }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Join our Discord Community</a>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--=======================================================
+                        COMMUNITY
+  =========================================================-->
+  <div class="container mt-192">
+    <!-- Contributors -->
+    <div class="row mb-5">
+        <div class="col-md-10 mx-auto text-center" data-aos="fade-up">
+        <h2 class="title-2">Powered by an <span>Amazing Community</span></h2>
+        <div class="mx-850 text-center">
+            <p>
+                MemMachine is built by a passionate community of open-source developers. We are grateful for every contribution, from the smallest typo fix to major feature development.
+            </p>
+        </div> 
+        <a href="https://github.com/MemMachine/MemMachine/graphs/contributors" class="mt-4 d-block">
+            <img src="https://contrib.rocks/image?repo=MemMachine/MemMachine" alt="MemMachine GitHub Contributors" class="img-fluid rounded shadow"/>
+        </a>
+        </div>
+    </div>
+
+    <!-- GtHub Star History -->
+    <div class="row">
+        <div class="col-md-10 mx-auto text-center" data-aos="fade-up">
+        <h2 class="title-2">Driven by <span>Momentum</span></h2>
+        <div class="mx-850 text-center">
+            <p>
+                Our community is growing every day. The star history reflects the increasing interest and support for building a better memory layer for AI agents.
+            </p>
+        </div> 
+        <a href="https://app.repohistory.com/star-history" class="mt-4 d-block">
+            <img src="https://app.repohistory.com/api/svg?repo=MemMachine/MemMachine&type=Date&background=211334&color=62C3F8" alt="Star History Chart" class="img-fluid rounded shadow"/>
+        </a>
+        </div>
+    </div>
+    </div>
+  
+  <!--=======================================================
+                        GET INVOLVED
+  =========================================================-->
+  <div class="container mt-192">
+    <div class="row">
+      <div class="col-md-12 text-center" data-aos="fade-up">
+        <h2 class="title-2">Find Your Place <span>in the Community</span></h2>
+      </div>
+    </div>
+    <div class="row gy-4 mt-4">
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-item h-100">
+          <div class="icon-circle"><i class="fa-solid fa-comments"></i></div>
+          <h3>Join the Conversation</h3>
+          <p>The best way to start is by joining our community on Discord. Ask questions, share your projects, and connect with other developers.</p>
+          {{ with .Site.Params.social.discord }}
+            <a href="{{ . }}" class="btn btn-secondary mt-auto">Join Discord</a>
+          {{ end }}
+        </div>
+      </div>
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="feature-item h-100">
+          <div class="icon-circle"><i class="fa-solid fa-code-branch"></i></div>
+          <h3>Contribute Code</h3>
+          <p>Ready to write some code? Check out our contribution guide, find a 'good first issue', and submit your first pull request.</p>
+          {{ with .Site.Params.social.github_issues }}
+            <a href="{{ . }}" class="btn btn-secondary mt-auto">See Good First Issues</a>
+          {{ end }}
+        </div>
+      </div>
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="feature-item h-100">
+          <div class="icon-circle"><i class="fa-solid fa-bug"></i></div>
+          <h3>Report a Bug or Request a Feature</h3>
+          <p>Have you found an issue or have an idea for a new feature? We'd love to hear it. Open an issue on GitHub to share your feedback.</p>
+          {{ with .Site.Params.social.github_issues }}
+            <a href="{{ . }}" class="btn btn-secondary mt-auto">Open an Issue</a>
+          {{ end }}
+        </div>
+      </div>
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="feature-item h-100">
+          <div class="icon-circle"><i class="fa-solid fa-book"></i></div>
+          <h3>Improve the Docs</h3>
+          <p>Great documentation is crucial. Help us improve our guides, tutorials, and examples to make MemMachine easier for everyone to use.</p>
+          {{ with .Site.Params.social.github_issues }}
+            <a href="{{ . }}" class="btn btn-secondary mt-auto">Contribute to Docs</a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--=======================================================
+                        GUIDING PRINCIPLES
+  =========================================================-->
+  <div class="container mt-192">
+    <div class="row">
+      <div class="col-md-8 mx-auto text-center" data-aos="fade-up">
+        <h2 class="title-2">Our Guiding <span>Principles</span></h2>
+        <div class="guidelines-list mt-4">
+          <a href="https://github.com/MemMachine/MemMachine/blob/main/CODE_OF_CONDUCT.md" class="guideline-item">
+            <h4>Code of Conduct</h4>
+            <p>Read our commitment to maintaining a respectful, inclusive, and harassment-free environment for everyone.</p>
+          </a>
+          <a href="https://github.com/MemMachine/MemMachine/blob/main/CONTRIBUTING.md" class="guideline-item">
+            <h4>Contributing Guide</h4>
+            <p>Find detailed instructions on how to contribute to the MemMachine codebase, including setup and pull request standards.</p>
+          </a>
+          <a href="https://github.com/MemMachine/MemMachine/blob/main/SECURITY.md" class="guideline-item">
+            <h4>Security Policy</h4>
+            <p>Learn how to report any security vulnerabilities you might find in the project.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{{ end }}

@@ -1,0 +1,9 @@
+{{ define "main" }}
+  <div class="percentage-bar"></div>
+
+  {{/* This will pull content from content/_index.md */}}
+  {{ .Content }}
+
+  {{/* This partial contains all the sections for the home page */}}
+  {{ partial "home-sections.html" . }}
+{{ end }}

@@ -1,0 +1,17 @@
+- question: What is MemMachine?
+  answer: MemMachine is an open-source, multi-layered memory system for AI agents. It allows developers to give their agents Short-Term, Long-Term, and Personalization memory, enabling them to have stateful, context-aware conversations and recall user-specific facts over time.
+
+- question: How is this different from standard LangChain or LangGraph memory?
+  answer: While libraries like LangChain provide excellent memory components, MemMachine focuses on abstracting the complexity of managing different memory types and provides a dedicated Personalization layer that can be easily integrated into any agent framework, including LangChain and LangGraph.
+
+- question: Is the Open Source version ready for production use?
+  answer: Yes, the open-source version is fully-featured and can be deployed in production environments. It is ideal for developers who are comfortable managing their own infrastructure. Our Pro and Enterprise tiers offer managed hosting, dedicated support, and advanced features for teams that require a higher level of service and security.
+
+- question: Why are these capabilities needed if they're becoming available by frontier labs like OpenAI?
+  answer: Because a frontier lab's memory service keeps the memory, and its memory service does not work with other models. Many organizations work with multiple models, including specialized models deployed in its private environment, including its VPC in the cloud and its own on-prem data center.  They desire a memory system that can support all of these models.
+
+- question: Who is driving development of MemMachine?
+  answer: MemVerge incubated the project to the current stage, and this project will be community-driven.  MemVerge will continue to assign its engineering team to improve the memory system, and contributors of all backgrounds are welcome to join.
+
+- question: How can I get started with MemMachine?
+  answer: You can get started by visiting our [documentation](https://docs.memmachine.ai)

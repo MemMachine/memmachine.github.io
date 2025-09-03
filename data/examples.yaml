@@ -1,0 +1,19 @@
+- title: Your CRM Assistant
+  icon: "fa-solid fa-user"
+  text: "Your agent can recall a client's entire history and deal stage, proactively helping your sales team build relationships and close deals faster."
+  url: "#"
+
+- title: A Healthcare Navigator
+  icon: "fa-solid fa-heart"
+  text: "Offer continuous patient support with an agent that remembers medical history and tracks treatment progress to provide a seamless healthcare journey."
+  url: "#"
+
+- title: A Personal Finance Advisor
+  icon: "fa-solid fa-comment-dollar"
+  text: "Your agent will remember a user's portfolio and risk tolerance, delivering personalized financial insights based on their complete history."
+  url: "#"
+  
+- title: A Technical Writer
+  icon: "fa-solid fa-pen-to-square"
+  text: "Build an assistant that remembers your unique style guide and terminology, ensuring perfect consistency across all documentation."
+  url: "#"

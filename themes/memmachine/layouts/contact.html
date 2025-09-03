@@ -1,0 +1,90 @@
+{{ define "main" }}
+    <!--=======================================================
+                            HERO
+    =========================================================-->
+    <div class="hero-area">
+    <div class="container">
+        <div data-aos="fade-up" data-aos-duration="1000">
+        <div class="row">
+            <div class="col-md-12">
+            <h1 class="title">
+                {{ .Params.hero.title | safeHTML }}
+                <span>{{ .Params.hero.span | safeHTML }}</span>
+            </h1>
+            <div class="mx-850 text-center">
+                {{ .Content }}
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="contact-area mtb-192">
+    <div class="container">
+        <div class="row" data-aos="fade-up" data-aos-duration="1000">
+        <div class="col-md-12">
+            <h2 class="title-2">Get <span>in Touch</span></h2>
+        </div>
+        <div class="col-md-12 col-lg-6" data-aos="fade-up" data-aos-duration="1000">
+            <div class="contact-content">
+            <img src="{{ "img/logo.svg" | relURL }}" alt="logo" />
+            <p>OpenAI presented Assistify with a range of challenging tasks, featuring tight latency requirements, substantial ambiguity, and instances of incorrect answers. In turn, Assistify collaborated closely to tailor their QA systems to our specific requirements.</p>
+            <h3>John Lawson</h3>
+            <h4>Member of Technical Staff</h4>
+            <h5>Trusted by the world's most ambitious teams</h5>
+            <div class="contact-brand">
+                <img src="{{ "img/brand/1.png" | relURL }}" alt="brand" />
+                <img src="{{ "img/brand/2.png" | relURL }}" alt="brand" />
+                <img src="{{ "img/brand/3.png" | relURL }}" alt="brand" />
+                <img src="{{ "img/brand/4.png" | relURL }}" alt="brand" />
+                <img src="{{ "img/brand/5.png" | relURL }}" alt="brand" />
+                <img src="{{ "img/brand/6.png" | relURL }}" alt="brand" />
+            </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-6" data-aos="fade-up" data-aos-duration="1000">
+            <div class="contact-form">
+            <h2>Quick Responses Await!</h2>
+            <p>Connect with us! Feel free to ask any questions or share your thoughts...</p>
+            <form action="">
+                <div class="form-group">
+                <div class="input-group">
+                    <input type="text" placeholder="First Name*" required />
+                    <input type="text" placeholder="Last Name*" required />
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Company Name*" required />
+                    <input type="text" placeholder="Job Title*" required />
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Email Address*" required />
+                    <input type="text" placeholder="Phone Number*" required />
+                </div>
+                <input type="text" placeholder="How can we help?" required />
+                </div>
+                <div class="form-check">
+                <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                    required
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                    I read and accept terms and conditions, privacy policy.
+                </label>
+                </div>
+                <button class="btn btn-primary">Submit</button>
+            </form>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!--=======================================================
+                          FAQ
+  =========================================================-->
+  {{ partial "faq.html" . }}
+{{ end }}

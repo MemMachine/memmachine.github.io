@@ -1,0 +1,21 @@
+{{- /* Create a list of all CSS files */ -}}
+{{- $files := slice "css/bootstrap.min.css" "css/aos.min.css" "css/lenis.css" "css/styles.css" "css/logo-marquee.css" -}}
+
+{{- /* Create an empty list to hold the resource objects */ -}}
+{{- $css := slice -}}
+
+{{- /* Loop through the file list and get the Hugo resource for each */ -}}
+{{- range $files -}}
+  {{- $css = $css | append (resources.Get .) -}}
+{{- end -}}
+
+{{- /* Concatenate all resource objects into a single bundle */ -}}
+{{- $bundle := $css | resources.Concat "css/bundle.css" | postCSS -}}
+
+{{- /* Minify and Fingerprint for production, but not for development */ -}}
+{{- if not hugo.IsDevelopment -}}
+  {{- $bundle = $bundle | minify | fingerprint -}}
+{{- end -}}
+
+{{- /* Render the final link tag */ -}}
+<link rel="stylesheet" href="{{ $bundle.RelPermalink }}" {{- if not hugo.IsDevelopment }} integrity="{{ $bundle.Data.Integrity }}"{{- end }}>

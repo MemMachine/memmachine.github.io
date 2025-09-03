@@ -1,0 +1,37 @@
+{{ define "header" }}
+  {{/* We leave this block empty to override the default header from baseof.html */}}
+{{ end }}
+
+{{ define "main" }}
+  <div class="percentage-bar"></div>
+  <!--=======================================================
+                        ERROR PAGE
+  =========================================================-->
+  <div class="error-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="title-2" data-aos="fade-up" data-aos-duration="1000">
+            <span>404.</span>
+          </h2>
+          <h3 data-aos="fade-up" data-aos-duration="1000">Page not found</h3>
+          <p data-aos="fade-up" data-aos-duration="1000">
+            Oops! It seems you've ventured into uncharted territory. Let's
+            guide you back on the right path.
+          </p>
+          <a
+            href="{{ "/" | relLangURL }}"
+            class="btn btn-primary"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            >Back to homepage</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+{{ end }}
+
+{{ define "footer" }}
+  {{/* We leave this block empty to override the default footer from baseof.html */}}
+{{ end }}

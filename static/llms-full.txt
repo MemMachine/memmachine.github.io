@@ -1,0 +1,101 @@
+# MemMachine Complete Documentation
+
+> This is a comprehensive documentation file that contains all the essential information about MemMachine, the advanced memory fabric for AI agents.
+
+## Quick Start
+
+To get started with MemMachine, install the Python SDK and configure your environment with your API key.
+
+### Installation
+
+```bash
+pip install memmachine
+````
+
+### Basic Usage
+
+```python
+from memmachine import MemMachine
+
+# Initialize the client for a specific user session
+mem = MemMachine(
+  api_key='your-api-key',
+  user_id='unique-user-123'
+)
+
+# Add information to the user's long-term memory
+mem.add_memory(
+  text="The user's favorite color is blue.",
+  metadata={'source': 'chat_log_#5'}
+)
+
+# Search the user's memory to retrieve relevant context
+results = mem.search(query="what is their preferred color?")
+
+# results will contain relevant memories, e.g.:
+# [{'text': "The user's favorite color is blue.", 'score': 0.95, ...}]
+```
+
+## API Reference
+
+### Core Methods
+
+#### `MemMachine(api_key, user_id)` (Constructor)
+
+Initializes a new MemMachine client for a specific user.
+
+**Parameters:**
+
+  - `api_key` (string): Your MemMachine API key.
+  - `user_id` (string): A unique identifier for the end-user to scope their memory.
+
+#### `add_memory(text, metadata=None)`
+
+Adds a piece of information to the specified user's long-term memory.
+
+**Parameters:**
+
+  - `text` (string): The content or fact to be stored.
+  - `metadata` (dict, optional): A JSON object for storing extra context, like source IDs or timestamps.
+
+**Returns:** `dict` - A confirmation of the stored memory entry.
+
+#### `search(query, top_k=5)`
+
+Searches the user's long-term memory for the most relevant information based on a query.
+
+**Parameters:**
+
+  - `query` (string): The question or topic to search for.
+  - `top_k` (int, optional): The maximum number of results to return. Defaults to 5.
+
+**Returns:** `list[dict]` - A list of memory objects, each including the original text, metadata, and a relevance score.
+
+## Configuration
+
+The project is configured using environment variables.
+
+### Environment Variables
+
+  - `MEMMACHINE_API_KEY`: Your API key.
+  - `MEMMACHINE_API_BASE`: (Optional) The base URL for the API endpoint if using a self-hosted instance.
+
+## Best Practices
+
+1.  **User ID Management**: Always use a stable, unique, and non-personally identifiable `user_id` for each end-user to maintain a consistent and secure memory profile.
+2.  **Metadata is Key**: Structure your `metadata` to include sources, timestamps, and session IDs. This allows for more advanced memory filtering and management (e.g., "forget memories from before last week").
+3.  **Separate Facts**: Store distinct facts or pieces of information in separate `add_memory` calls. This improves the quality and relevance of search results.
+4.  **Secure API Keys**: Store your API key securely in an environment variable or secrets manager. Never expose it in client-side code.
+
+## Troubleshooting
+
+### Common Issues
+
+**Issue:** Authentication Error (401/403)
+**Solution:** Verify your `MEMMACHINE_API_KEY` is correct, active, and has the necessary permissions.
+
+**Issue:** Irrelevant Search Results
+**Solution:** Ensure you are storing granular, single-fact memories. Check if your query is specific enough. Consider enriching your stored memories with more descriptive text or metadata.
+
+**Issue:** High Latency
+**Solution:** Ensure your application is running in a region close to MemMachine's servers. If querying large amounts of data, consider optimizing your agent's logic to perform fewer, more targeted searches.

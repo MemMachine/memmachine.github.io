@@ -1,0 +1,72 @@
+/* ============================================= */
+/* LOGO MARQUEE STYLES                           */
+/* ============================================= */
+
+/* The main container that acts as a "window" */
+.logo-marquee {
+  width: 100%;
+  overflow: hidden;
+  padding: 1rem 0;
+  /* The fade effect on the left and right edges */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+}
+
+/* The inner element that holds and moves the logos */
+.logo-scroller {
+  display: flex;
+  width: max-content; /* Ensures the container is wide enough for all logos */
+  flex-wrap: nowrap;
+  /* The animation definition */
+  animation: scroll 45s linear infinite;
+}
+
+/* A modifier class to reverse the animation direction */
+.logo-marquee.reverse .logo-scroller {
+  animation-direction: reverse;
+}
+
+/* Pause the animation when the user hovers over the marquee */
+.logo-marquee:hover .logo-scroller {
+  animation-play-state: paused;
+}
+
+/* Defines the animation keyframes */
+@keyframes scroll {
+  from {
+    /* Starts with no translation */
+    transform: translateX(0);
+  }
+  to {
+    /* Moves the scroller left by half its total width */
+    transform: translateX(-50%);
+  }
+}
+
+/* Individual logo item styling */
+.logo-scroller-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2.5rem; /* Adjust space between logos */
+}
+
+.logo-scroller-item img {
+  height: 40px; /* Or your desired logo height */
+  width: auto;
+  /* filter: grayscale(1) opacity(0.7); */
+  transition: all 0.3s ease;
+}
+
+/* Style for logos on hover for a nice interactive touch */
+.logo-scroller-item:hover img {
+  /* filter: grayscale(0) opacity(1);*/
+  transform: scale(1.1);
+}
+
+/* Crucial accessibility feature to respect user preferences */
+@media (prefers-reduced-motion) {
+  .logo-scroller {
+    animation: none;
+  }
+}

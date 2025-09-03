@@ -1,0 +1,54 @@
+{{ define "main" }}
+  <!--=======================================================
+                        HERO
+  =========================================================-->
+  <div class="hero-area">
+    <div class="container">
+      <div data-aos="fade-up" data-aos-duration="1000">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="title">
+              {{ .Title }}
+            </h1>
+            <div class="mx-850 text-center">
+              {{ .Content }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--=======================================================
+                          EXAMPLES
+  =========================================================-->
+  <div class="feature-area mt-192">
+    <div class="container">
+      <div class="row">
+        <!--
+        <div class="col-md-12" data-aos="fade-up" data-aos-duration="1000">
+          <h2 class="title-2">Powerful <span>examples</span></h2>
+        </div>
+        -->
+      </div>
+      <div class="row gy-4">
+        {{/* Check if the examples data file exists */}}
+        {{ if site.Data.examples }}
+          {{/* Loop through each item in data/examples.yaml */}}
+          {{ range site.Data.examples }}
+          <div class="col-md-4">
+            <div class="feature-item" data-aos="fade-up" data-aos-duration="1000">
+              <div class="icon-circle">
+                <i class="{{ .icon }}"></i>
+              </div>
+              <h3>{{ .title }}</h3>
+              <p>{{ .text }}</p>
+              <a href="{{ .url }}" class="btn btn-secondary">Learn More</a>
+            </div>
+          </div>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+
+{{ end }}

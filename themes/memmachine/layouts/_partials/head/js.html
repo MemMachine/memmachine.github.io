@@ -1,0 +1,19 @@
+{{/* Load the AOS vendor script directly from the static folder */}}
+<script src="{{ `/js/aos.min.js` | relURL }}" defer></script>
+
+{{/* Get and bundle our custom application code */}}
+{{- $jsFiles := slice 
+    (resources.Get "js/custom.js") 
+}}
+{{- with $jsFiles | resources.Concat "js/main.js" }}
+  {{- $opts := dict "minify" (not hugo.IsDevelopment) }}
+  {{- with . | js.Build $opts }}
+    {{- if hugo.IsDevelopment }}
+      <script src="{{ .RelPermalink }}" defer></script>
+    {{- else }}
+      {{- with . | fingerprint }}
+        <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" defer></script>
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- end }}
