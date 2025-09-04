@@ -1,35 +1,59 @@
 ---
 title: "Terms of Service"
-date: 2024-08-21T12:00:00-07:00
+date: 2025-09-03T21:21:00-06:00
 draft: false
 layout: "privacy-policy"
-description: "Last Updated: August 22, 2023"
+description: "Last Updated: September 3, 2025"
 
 policy_sections:
-  - title: "Welcome to Assistify"
+  - title: "1. Agreement to Terms"
     content: |
-      <p>This Assistify Services Agreement (“Agreement”) is a legal agreement between Assistify Inc. (“Assistify”, “us”, or “we”) and the entity or person (“you”, “your”, or “user”) who registered on the Assistify signup page to utilize our hiring services, assessment services, and other business solutions that may be offered by Assistify and its affiliated entities (each, a “Service”). This Agreement outlines the terms of service that govern your usage of the Services. If any aspect of this Agreement is unclear to you, please reach out to us before commencing use of the Services.</p>
-      <p>Access or use of any Services is contingent upon your acceptance and adherence to all stipulated terms and conditions in this Agreement.</p>
-      <p>Usage Data: Information on how you use Assistify, like the features you interact with, frequency, duration of interactions, and any errors or crashes.</p>
-      <p>Device Information: Details about the device you use to access Assistify, such as device type, operating system, browser, and IP address.</p>
+      <p>This Terms of Service Agreement (“Agreement”) constitutes a legally binding agreement made between you, whether personally or on behalf of an entity (“you,” “your”), and MemMachine (“we,” “us,” or “our”), concerning your access to and use of the memmachine.ai website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the “Site” and the “Services”).</p>
+      <p>Our Services include our hosted cloud offerings (“Pro,” “Enterprise”) and any other solutions offered by MemMachine. This Agreement does not govern the self-hosted, open-source version of our software, which is provided under the applicable open-source license available in the software repository.</p>
+      <p>By accessing or use of the Services, you agree to be bound by this Agreement. If you do not agree to all the terms and conditions of this Agreement, you are expressly prohibited from using the Services and you must discontinue use immediately.</p>
 
-  - title: "Account Terms"
+  - title: "2. Your Account"
     content: |
-      <p>In order to access and make use of the Services, you must complete the registration process for an Assistify account (“Account”). Successful completion of your Account registration mandates the provision of your full legal name, a valid email address, and any other information marked as mandatory. Assistify reserves the right to decline your Account application or terminate an existing Account at our sole discretion, without the obligation to provide a reason.</p>
-      <p>You must be of legal age (18 years or older) or meet the age of majority in your jurisdiction, whichever is higher, to open an Account and utilize the Services. By accepting Services provided by Assistify, you affirm that the purpose is business-related and not intended for personal, household, or familial use.</p>
-      <p>You acknowledge that the email address you provide upon Account creation, or any subsequent updates, will serve as the primary mode of communication between you and Assistify (“Primary Email Address”). Maintenance of the Primary Email Address is your responsibility, and it must be capable of both sending and receiving messages. Email correspondence from your Primary Email Address will serve as the valid means of authentication.</p>
-      <p>The security of your password lies with you. Assistify shall not be held liable for any losses or damages arising from your failure to maintain the security of your Account and password.</p>
-      <p>Technical assistance related to the Services is exclusively available to Assistify Users. Queries regarding the Terms of Service should be directed to Assistify Support.</p>
-      <p>You agree not to reproduce, duplicate, copy, sell, resell, or exploit any part of the Service, the Services' use, or access without explicit written permission from Assistify. You also agree not to circumvent, work around, or bypass technical limitations of the Services, nor to utilize tools to activate disabled features or functionalities, or engage in decompiling, disassembling, or reverse engineering the Services. Accessing the Services or monitoring materials or information using automated means like robots, spiders, or scrapers is prohibited.</p>
-      <p>You understand that your Materials may be transmitted without encryption and may involve (a) transmission across diverse networks and (b) adjustments to comply with technical requisites of connected networks or devices. “Materials” refer to Your Trademarks, copyrighted content, any products or services offered via the Services (including descriptions and prices), as well as any photos, images, videos, graphics, textual content, audio files, code, information, or other data supplied by you or your affiliates to Assistify or its affiliates.</p>
+      <p>To use our hosted Services, you must register for an account (“Account”). You agree to provide accurate, current, and complete information during the registration process and to update such information to keep it accurate, current, and complete. We reserve the right to suspend or terminate your Account if any information provided during the registration process or thereafter proves to be inaccurate, not current, or incomplete.</p>
+      <p>You are responsible for safeguarding your password and for all activities that occur under your Account. You agree to notify us immediately of any unauthorized use of your Account. We are not liable for any loss or damage arising from your failure to comply with this security obligation.</p>
+      <p>You must be at least 18 years old or the age of majority in your jurisdiction to open an Account and use our Services.</p>
+    
+  - title: "3. Use of Services and Acceptable Use"
+    content: |
+      <p>You agree to use our Services in compliance with all applicable laws, rules, and regulations. You are solely responsible for all data, information, and content you or your end-users provide, upload, or store in the Services (“Your Content”).</p>
+      <p>You agree not to misuse the Services. For example, you must not, and must not attempt to, do the following:</p>
+      <ul>
+        <li>Use the Services for any illegal purpose or in violation of any local, state, national, or international law;</li>
+        <li>Develop or use agents that are designed or used to generate spam, malware, or content that is defamatory, obscene, or promotes hatred or violence;</li>
+        <li>Violate, or encourage others to violate, the rights of third parties, including by infringing or misappropriating their intellectual property rights;</li>
+        <li>Interfere with the operation of the Services or any user’s enjoyment of the Services, including by uploading or otherwise disseminating any virus, adware, spyware, worm, or other malicious code.</li>
+      </ul>
+    
+  - title: "4. Fees, Payment, and Subscription"
+    content: |
+      <p>Certain Services are provided on a paid subscription basis. By selecting a paid Service, you agree to pay us the monthly or annual subscription fees indicated for that service. Payments will be charged on a pre-pay basis on the day you sign up for a paid Service and will cover the use of that service for a monthly or annual subscription period as indicated. Subscription fees are not refundable.</p>
+      <p>Unless you notify us before the end of the applicable subscription period that you want to cancel, your subscription will automatically renew and you authorize us to collect the then-applicable annual or monthly subscription fee using any credit card or other payment mechanism we have on record for you.</p>
+    
+  - title: "5. Intellectual Property"
+    content: |
+      <p>We own and retain all right, title, and interest in and to the Services and all related intellectual property rights. We grant you a limited, non-exclusive, non-sublicensable, non-transferable license to use the Services in accordance with this Agreement.</p>
+      <p>You own all right, title, and interest in and to Your Content. You grant us a worldwide, non-exclusive, royalty-free license to use, reproduce, modify, and display Your Content solely as necessary to provide the Services to you.</p>
+    
+  - title: "6. Term and Termination"
+    content: |
+      <p>This Agreement is effective until terminated by you or us. You may cancel your Account at any time through the Service's interface. We reserve the right to suspend or terminate your access to the Services at our sole discretion, without notice, for any conduct that we believe violates this Agreement or is harmful to other users of the Services, us, or third parties, or for any other reason.</p>
+    
+  - title: "7. Disclaimer of Warranties and Limitation of Liability"
+    content: |
+      <p>THE SERVICES ARE PROVIDED “AS IS” AND “AS AVAILABLE” WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
+      <p>TO THE FULLEST EXTENT PERMITTED BY LAW, IN NO EVENT WILL MEMMACHINE, ITS AFFILIATES, OFFICERS, EMPLOYEES, AGENTS, SUPPLIERS, OR LICENSORS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, PUNITIVE, COVER, OR CONSEQUENTIAL DAMAGES (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOST PROFITS, REVENUE, GOODWILL, USE, OR CONTENT) HOWEVER CAUSED, UNDER ANY THEORY OF LIABILITY, INCLUDING, WITHOUT LIMITATION, CONTRACT, TORT, WARRANTY, NEGLIGENCE, OR OTHERWISE, EVEN IF WE HAVE BEEN ADVISED AS TO THE POSSIBILITY OF SUCH DAMAGES.</p>
+    
+  - title: "8. Governing Law"
+    content: |
+      <p>This Agreement shall be governed by and construed in accordance with the laws of the State of Colorado, United States, without regard to its conflict of law principles.</p>
 
-  - title: "Company Terms"
+  - title: "9. Changes to This Agreement"
     content: |
-      <p>To establish a new company through your Assistify account, you must provide: organization location details, a valid email address, and any other mandatory information. Assistify retains the right to reject organization applications or terminate existing organizations at our sole discretion, without the need for explanation.</p>
+      <p>We reserve the right, at our sole discretion, to modify or replace this Agreement at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
 
-  - title: "Account Activation"
-    content: |
-      <p>The individual signing up for the Service by creating an Account will be considered the contracting party (“Company Owner”) for the purpose of our Terms of Service and will be authorized to utilize any corresponding Account provided to the Company Owner in connection with the Service. Ensuring the visibility of the Company Owner's name (including the legal name of the owning company, if applicable) on the company's website is your responsibility.</p>
-      <p>If you are registering for the Services on behalf of your employer, your employer shall be deemed the organization Owner. If registering for the Services on behalf of your employer, you must use your employer-issued email address, and you confirm that you possess the authority to bind your employer to our Terms of Service.</p>
-      <p>An Assistify company can only be affiliated with a single Company Owner. A Company Owner may have multiple Assistify companies. “Company” refers to the online company (whether hosted on Assistify's platform or a third-party website) or physical retail location(s) linked to the Account.</p>
 ---
