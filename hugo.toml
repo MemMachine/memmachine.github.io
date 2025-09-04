@@ -50,10 +50,10 @@ tags = 'tags'
     pageRef = '/examples'
     weight = 20
 
-  [[menus.main]]
-    name = 'Integrations'
-    pageRef = '/integrations'
-    weight = 30
+  #[[menus.main]]
+  #  name = 'Integrations'
+  #  pageRef = '/integrations'
+  #  weight = 30
 
   # [[menus.main]]
   #  name = 'Pricing'
@@ -76,10 +76,10 @@ tags = 'tags'
     pageRef = '/examples'
     weight = 10
 
-  [[menus.footerProduct]]
-    name = 'Integrations'
-    pageRef = '/integrations'
-    weight = 20
+  #[[menus.footerProduct]]
+  #  name = 'Integrations'
+  #  pageRef = '/integrations'
+  #  weight = 20
 
   [[menus.footerProduct]]
     name = 'Blog'
