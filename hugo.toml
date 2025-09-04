@@ -103,12 +103,12 @@ tags = 'tags'
   #  weight = 30
 
   # Footer Community menu
-  [[menus.footerCommunity]]
-    name = 'Twitter/X'
-    url = 'https://twitter.com/memmachineai'
-    weight = 10
-    [menus.footerCommunity.params]
-      icon = "twitter"
+  #[[menus.footerCommunity]]
+  #  name = 'Twitter/X'
+  #  url = 'https://twitter.com/memmachineai'
+  #  weight = 10
+  #  [menus.footerCommunity.params]
+  #    icon = "twitter"
 
   [[menus.footerCommunity]]
     name = 'Github'
