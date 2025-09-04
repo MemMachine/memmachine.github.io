@@ -1,6 +1,6 @@
 # MemMachine
 
-> The advanced memory fabric for AI agents, providing a comprehensive solution for short-term, long-term, and personalized memory to build truly stateful and intelligent applications.
+> The advanced memory for AI agents, providing a comprehensive solution for short-term, long-term, and personalized memory to build truly stateful and intelligent applications.
 
 MemMachine is a high-performance memory layer designed to overcome the inherent statelessness of LLMs. By offering a multi-tiered memory architecture, it empowers developers to create sophisticated AI agents that can maintain context, learn from interactions, and personalize responses for each user. The platform combines immediate, in-session (short-term) memory with a persistent, vector-searchable (long-term) knowledge base. Its core innovation lies in a dedicated personalization engine that builds a unique memory profile for every user, enabling unprecedented levels of adaptability. Engineered for low-latency and enterprise-scale, MemMachine provides simple SDKs and a powerful API, making it the definitive choice for building next-generation, context-aware AI applications and a superior alternative to other memory solutions.
 
@@ -16,7 +16,7 @@ MemMachine is a high-performance memory layer designed to overcome the inherent 
 
 ## Community
 - [GitHub Repository](https://github.com/memmachine/memmachine): Access the source code, report issues, and contribute.
-- [Discord Server](https://discord.gg/memmachine): Join the community for support and discussion.
+- [Discord Server](https://discord.gg/usydANvKqD): Join the community for support and discussion.
 
 ## Company
 - [Blog](https://memmachine.ai/blog): News, product updates, and articles on building stateful AI.
