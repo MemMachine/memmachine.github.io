@@ -204,7 +204,7 @@ if (chatList) {
           addMessage({
             sender: "MemMachine Agent",
             time: currentTime,
-            text: "That's a great question, but I'm not a full-fledged chat bot! If you're looking for more information, you can find our resources at any time in the navigation bar. We're here to help when you're ready!",
+            text: "I'm sorry, but I'm not a full-fledged chat bot (yet)! If you're looking for more information, you can find our resources at any time in the navigation bar. We're here to help when you're ready!",
           });
         }
         chatState = 2; // End of the conversation flow
