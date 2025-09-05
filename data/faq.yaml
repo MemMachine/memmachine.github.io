@@ -1,17 +1,26 @@
-- question: What is MemMachine?
-  answer: MemMachine is an open-source, multi-layered memory system for AI agents. It allows developers to give their agents Short-Term, Long-Term, and Personalization memory, enabling them to have stateful, context-aware conversations and recall user-specific facts over time.
-
-- question: How is this different from standard LangChain or LangGraph memory?
-  answer: While libraries like LangChain provide excellent memory components, MemMachine focuses on abstracting the complexity of managing different memory types and provides a dedicated Personalization layer that can be easily integrated into any agent framework, including LangChain and LangGraph.
-
-- question: Is the Open Source version ready for production use?
-  answer: Yes, the open-source version is fully-featured and can be deployed in production environments. It is ideal for developers who are comfortable managing their own infrastructure. Our Pro and Enterprise tiers offer managed hosting, dedicated support, and advanced features for teams that require a higher level of service and security.
+- question: What is MemMachine, and what makes it unique?
+  answer: MemMachine is an open-source, multi-layered memory system for AI agents. It allows you to equip your agents with Short-Term, Long-Term, and Personalization memory. While many AI models offer some form of built-in memory, MemMachine's system is model-agnostic, meaning it can support multiple AI models simultaneously, including specialized models hosted in a private cloud or on-premises data center. This capability enables organizations to maintain full control of their data and work with various models without vendor lock-in.
 
 - question: Why are these capabilities needed if they're becoming available by frontier labs like OpenAI?
   answer: Because a frontier lab's memory service keeps the memory, and its memory service does not work with other models. Many organizations work with multiple models, including specialized models deployed in its private environment, including its VPC in the cloud and its own on-prem data center.  They desire a memory system that can support all of these models.
 
+- question: How does MemMachine handle data privacy and security?
+  answer: MemMachine is designed with security in mind. The open-source version can be deployed in your private cloud or on-premises environment, giving you full control over your data.
+
 - question: Who is driving development of MemMachine?
-  answer: MemVerge incubated the project to the current stage, and this project will be community-driven.  MemVerge will continue to assign its engineering team to improve the memory system, and contributors of all backgrounds are welcome to join.
+  answer: The project was initially incubated by MemVerge to its current state. The project is now community-driven, and we welcome contributors of all backgrounds. MemVerge will continue to assign its engineering team to improve the memory system and support community efforts.
 
 - question: How can I get started with MemMachine?
   answer: You can get started by visiting our [documentation](https://docs.memmachine.ai)
+
+- question: Where can I find the source code for MemMachine?
+  answer: The source code for MemMachine is available on [GitHub](https://github.com/MemMachine/MemMachine)
+
+- question: How can I contribute to the MemMachine project?
+  answer: We welcome contributions from the community! You can contribute by reporting issues, suggesting features, or submitting pull requests on our [GitHub](https://github.com/MemMachine/MemMachine) repository.
+
+- question: How do I get support for MemMachine?
+  answer: You can get support through our community channels by joining our [Discord server](https://discord.gg/usydANvKqD) or filing an issue on our [GitHub](https://github.com/MemMachine/MemMachine) repository.
+
+- question: Is there an Enterprise version of MemMachine or support available for MemMachine users?
+  answer: An Enterprise version of MemMachine with additional features and dedicated support will be available soon.
