@@ -87,39 +87,44 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Chat Widget
 const chatList = document.getElementById("chatList");
 const userInput = document.getElementById("userInput");
 const sendButton = document.getElementById("sendButton");
+const chatInputContainer = document.getElementById("chatInputContainer");
 
 // Check if chatList exists before proceeding
 if (chatList) {
-  const messages = [
+  // Chat state to manage the conversation flow
+  let chatState = 0; 
+  
+  // Pre-scripted messages for the chat flow
+  const scriptedMessages = [
     {
       sender: "You",
-      time: "1:17 PM",
-      text: "What are your thoughts on the latest AI chip manufacturer earnings reports that came out this week?",
+      text: "How can I manage user-specific data without retraining my model for every user?",
     },
     {
       sender: "MemMachine Agent",
-      time: "1:17 PM",
-      text: "The reports show strong growth, particularly in the data center segment. However, I recall you mentioned last month that you're looking to decrease your exposure to hardware manufacturers and focus more on AI software and platform companies. Do you want me to filter these insights based on that strategy?",
+      text: "That's a key challenge for building personalized agents. MemMachine addresses this with its Personalization memory layer, which stores user-specific data independently of your core model. I recall you were building a financial advice agent for small businesses last month—this is a perfect use case for that.",
     },
     {
       sender: "You",
-      time: "1:18 PM",
-      text: "Wow, good memory. Yes, please. Focus on the implications for software companies.",
+      text: "Wow, you remember that? That's exactly what I'm working on. How does that work under the hood?",
     },
     {
       sender: "MemMachine Agent",
-      time: "1:18 PM",
-      text: "Understood. The strong hardware sales signal a surge in demand for advanced AI models, which is a bullish indicator for AI platform companies that leverage this new hardware.",
+      text: "The core of our memory system is designed to be model-agnostic, giving your agents stateful, context-aware conversations and the ability to recall user-specific facts over time. This is the foundation for building the next generation of AI solutions.",
+    },
+    {
+      sender: "You",
+      text: "Okay, that's exactly what I need.",
+    },
+    {
+      sender: "MemMachine Agent",
+      text: "You're welcome! Would you like to know how to get started with this kind of memory system? (Yes/No)",
     },
   ];
-
-  // Function to add initial messages to the chat
-  function loadInitialMessages() {
-    messages.forEach((message) => addMessage(message));
-  }
 
   function addMessage(message) {
     const chatItem = document.createElement("div");
@@ -134,49 +139,147 @@ if (chatList) {
             </div>
           `;
     chatList.appendChild(chatItem);
-    chatItem.classList.add("fade-in"); // Add fade-in class for animation
-    chatList.scrollTop = chatList.scrollHeight; // Scroll to the bottom
+    chatItem.classList.add("fade-in");
+    chatList.scrollTop = chatList.scrollHeight;
+  }
+  
+  // New function to load the entire conversation history
+  function loadConversationHistory() {
+    let delay = 0;
+    for (let i = 0; i < scriptedMessages.length; i++) {
+      setTimeout(() => {
+        const currentTime = new Date().toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit",
+        });
+        addMessage({
+          sender: scriptedMessages[i].sender,
+          time: currentTime,
+          text: scriptedMessages[i].text,
+        });
+      }, delay);
+      delay += 500; // Reduced delay for a faster feel
+    }
+    // Set the state to 1 after the initial conversation loads,
+    // so the next message from the user is a response to the question.
+    chatState = 1;
   }
 
-  // Load initial messages on page load
-  loadInitialMessages();
+  function submitMessage() {
+    const userMessage = userInput.value.trim().toLowerCase();
+    const currentTime = new Date().toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+    
+    // The chat widget is only active for the final response
+    if (chatState === 1) {
+      // Post the user's message
+      addMessage({
+        sender: "You",
+        time: currentTime,
+        text: userInput.value,
+      });
+      userInput.value = "";
+
+      const positiveResponses = ["yes", "y", "sure", "ok", "of course", "please"];
+      const negativeResponses = ["no", "n", "nope", "nah"];
+      const isPositive = positiveResponses.some(response => userMessage.includes(response));
+      const isNegative = negativeResponses.some(response => userMessage.includes(response));
+
+      setTimeout(() => {
+        if (isPositive) {
+          addMessage({
+            sender: "MemMachine Agent",
+            time: currentTime,
+            text: `Great! The best way to get started is with our comprehensive <a href="https://docs.memmachine.ai" target="_blank">documentation</a>. You can also <a href="https://discord.memmachine.ai" target="_blank">join our Discord server</a> to collaborate with other developers, or <a href="https://playground.memmachine.ai" target="_blank">try the Playground</a> to see a live demo.`,
+          });
+        } else if (isNegative) {
+          addMessage({
+            sender: "MemMachine Agent",
+            time: currentTime,
+            text: "No problem. If you change your mind, you can find our resources at any time in the navigation bar. We're here to help when you're ready!",
+          });
+        } else {
+          addMessage({
+            sender: "MemMachine Agent",
+            time: currentTime,
+            text: "That's a great question, but I'm not a full-fledged chat bot! If you're looking for more information, you can find our resources at any time in the navigation bar. We're here to help when you're ready!",
+          });
+        }
+        chatState = 2; // End of the conversation flow
+        disableChatInput();
+        addRestartButton();
+      }, 500); // Reduced delay
+    } else {
+      // Default message for any interaction after the conversation is over
+      addMessage({
+        sender: "You",
+        time: currentTime,
+        text: userInput.value,
+      });
+      userInput.value = "";
+
+      setTimeout(() => {
+        addMessage({
+          sender: "MemMachine Agent",
+          time: currentTime,
+          text: "Thanks for visiting! Please use the links above to learn more about MemMachine."
+        });
+      }, 500); // Reduced delay
+    }
+  }
+
+  function disableChatInput() {
+    userInput.disabled = true;
+    sendButton.style.display = "none";
+    userInput.placeholder = "Chat is complete.";
+  }
+  
+  function addRestartButton() {
+    const restartButton = document.createElement("button");
+    restartButton.id = "restartButton";
+    restartButton.className = "hero-chat-input-btn";
+    restartButton.innerHTML = `
+      <i class="fa-solid fa-rotate-right"></i>
+    `;
+    restartButton.addEventListener("click", () => {
+      chatList.innerHTML = ""; // Clear the chat messages
+      loadConversationHistory();
+      enableChatInput();
+    });
+    // Append the restart button to the chat input container
+    chatInputContainer.appendChild(restartButton);
+  }
+
+  function enableChatInput() {
+    userInput.disabled = false;
+    sendButton.style.display = "block";
+    userInput.placeholder = "Type your message";
+    const restartButton = document.getElementById('restartButton');
+    if (restartButton) {
+      restartButton.remove();
+    }
+  }
 
   sendButton.addEventListener("click", () => {
     submitMessage();
   });
 
-  // Allow submitting message with Enter key
   userInput.addEventListener("keypress", (event) => {
     if (event.key === "Enter") {
       submitMessage();
     }
   });
 
-  function submitMessage() {
-    const userMessage = userInput.value;
-    if (userMessage) {
-      const currentTime = new Date().toLocaleTimeString([], {
-        hour: "2-digit",
-        minute: "2-digit",
-      });
-      addMessage({
-        sender: "You",
-        time: currentTime,
-        text: userMessage,
-      });
-      userInput.value = ""; // Clear input
-
-      // Simulate the agent response
-      setTimeout(() => {
-        addMessage({
-          sender: "MemMachine Agent",
-          time: currentTime,
-          text: "Free quote limit reached. Please upgrade for unlimited access.",
-        });
-      }, 500); // Delay for agent response
-    }
-  }
+  // Start the conversation history when the page loads
+  loadConversationHistory();
 }
+
+
+
+
+
 
 // Initialize Lenis for smooth scrolling
 const lenis = new Lenis();
