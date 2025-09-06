@@ -83,7 +83,7 @@ body {
   line-height: 1.5;
   font-weight: 400;
   background: #211334 url(/img/bg.svg) center/cover no-repeat;
-  color: var(--light-300);
+  color: var(--light-500);
   scroll-behavior: smooth;
 }
 input:focus {
@@ -447,10 +447,19 @@ header nav ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: var(--gradient-lavender-pink-peach);
 }
-.hero-chat-input button svg {
+.hero-chat-input button i {
+  color: white; /* Ensure icons are white */
+}
+
+.hero-chat-input button svg,
+.hero-chat-input button i {
   width: 24px;
   height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .hero-brand p {
   margin-bottom: 32px;
@@ -462,7 +471,7 @@ header nav ul li a:hover {
 }
 
 .hero-chat-list::-webkit-scrollbar {
-  width: 4px;
+  width: 8px;
 }
 
 .hero-chat-list::-webkit-scrollbar-track {
