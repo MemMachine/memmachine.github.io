@@ -11,7 +11,7 @@
             With <span>Memory that Lasts.</span>
           </h1>
           <p class="text-center mx-850">
-            Meet MemMachine, an open-source memory layer for advanced AI agents.  It enables AI-powered applications to learn, store, and recall data and preferences from past sessions to enrich future interactions.  MemMachine’s memory layer persists across multiple sessions, agents, and large language models, building a sophisticated, evolving user profile. It transforms AI chatbots into personalized, context-aware AI assistants designed to understand and respond with better precision and depth.
+            Meet MemMachine, an open-source memory layer for advanced AI agents.  It enables AI-powered applications to learn, store, and recall data and preferences from past sessions to enrich future interactions.  MemMachine's memory layer persists across multiple sessions, agents, and large language models, building a sophisticated, evolving user profile. It transforms AI chatbots into personalized, context-aware AI assistants designed to understand and respond with better precision and depth.
           </p>
           <div class="hero-btn">
             <div data-aos="fade-up" data-aos-duration="1000">
@@ -245,6 +245,69 @@
 <!--=======================================================
                           HOW IT WORKS
 =========================================================-->
+<div class="solution-area mtb-192">
+  <div class="container">
+    <div data-aos="fade-up" data-aos-duration="1000">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="title-2">
+            The <span>MemMachine</span> Architecture
+          </h2>
+        </div>
+      </div>
+      <div class="solution-item">
+        <div class="row align-items-stretch flex-row-reverse">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div data-aos="fade-up" data-aos-delay="200">
+              <div class="solution-item-list h-100 d-flex justify-content-center align-items-center">
+                <img src="{{ `img/MemMachine_Architecture-Dark.png` | relURL }}" alt="MemMachine Architecture Diagram" class="img-fluid" />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div data-aos="fade-up" data-aos-duration="800">
+              <div class="solution-item-list h-100"> 
+                <div class="solution-single">
+                  <div class="icon-circle">
+                    <i class="fa-solid fa-1"></i>
+                  </div>
+                  <div>
+                    <h4>Agents Interact via the API Layer</h4>
+                    <p>
+                      Users interact with an agent, which connects to the MemMachine Memory core through a RESTful API, Python SDK, or MCP Server.
+                    </p>
+                  </div>
+                </div>
+                <div class="solution-single">
+                  <div class="icon-circle">
+                    <i class="fa-solid fa-2"></i>
+                  </div>
+                  <div>
+                    <h4>MemMachine Manages Memory</h4>
+                    <p>
+                      MemMachine processes interactions and stores them in two distinct types: Episodic Memory for conversational context and Profile Memory for long-term user facts.
+                    </p>
+                  </div>
+                </div>
+                <div class="solution-single">
+                  <div class="icon-circle">
+                    <i class="fa-solid fa-3"></i>
+                  </div>
+                  <div>
+                    <h4>Data is Persisted to Databases</h4>
+                    <p>
+                      Memory is persisted to a database layer where Episodic Memory is stored in a graph database and Profile Memory is stored in an SQL database.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!--=======================================================
                           SOLUTIONS/USE CASES
