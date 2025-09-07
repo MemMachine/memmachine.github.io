@@ -1933,3 +1933,21 @@ footer p {
   font-size: 1.5rem; /* 24px */
   color: #c5c6e0; /* Similar to the inverted image color */
 }
+
+.blog-text ul {
+  padding-left: 2rem;
+  margin: 20px 0;
+}
+
+.blog-text ul li {
+  list-style-type: disc;
+  margin: 20px 0;
+}
+
+.blog-text ol li {
+  margin: 20px 0;
+}
+
+.social-icon {
+  margin-top: 20px;
+}
