@@ -68,7 +68,27 @@ tags = 'tags'
   [[menus.main]]
     name = 'Blog'
     pageRef = '/blog'
-    weight = 50
+    weight = 60
+
+  [[menus.main]]
+    name = 'Docs'
+    url = 'http://docs.memmachine.ai'
+    weight = 70
+
+  # Social media links for the top nav
+  [[menus.social]]
+    name = "Discord"
+    url = "https://discord.gg/usydANvKqD"
+    weight = 10
+    [menus.social.params]
+      icon = "discord"
+
+  [[menus.social]]
+    name = "GitHub"
+    url = "https://github.com/MemMachine/MemMachine"
+    weight = 20
+    [menus.social.params]
+      icon = "github"
 
   # Footer Product menu
   [[menus.footerProduct]]
@@ -85,6 +105,11 @@ tags = 'tags'
     name = 'Blog'
     pageRef = '/blog'
     weight = 30
+
+  [[menus.footerProduct]]
+    name = 'Docs'
+    url = 'http://docs.memmachine.ai'
+    weight = 40  
 
   # Footer Company menu
   [[menus.footerCompany]]
