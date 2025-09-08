@@ -68,7 +68,12 @@ tags = 'tags'
   [[menus.main]]
     name = 'Blog'
     pageRef = '/blog'
-    weight = 50
+    weight = 60
+
+  [[menus.main]]
+    name = 'Docs'
+    url = 'http://docs.memmachine.ai'
+    weight = 70
 
   # Footer Product menu
   [[menus.footerProduct]]
@@ -85,6 +90,11 @@ tags = 'tags'
     name = 'Blog'
     pageRef = '/blog'
     weight = 30
+
+  [[menus.footerProduct]]
+    name = 'Docs'
+    url = 'http://docs.memmachine.ai'
+    weight = 40  
 
   # Footer Company menu
   [[menus.footerCompany]]
