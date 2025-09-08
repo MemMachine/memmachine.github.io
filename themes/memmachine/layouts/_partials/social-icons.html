@@ -1,0 +1,11 @@
+<div class="header-social-icons d-flex">
+  {{ with site.Menus.social }}
+    {{- range . }}
+      <a class="me-2" href="{{ .URL }}" target="_blank" rel="noopener" aria-label="{{ .Name }}">
+        {{- with .Params.icon }}
+        <i class="fab fa-{{ . }}" aria-hidden="true"></i>
+        {{- end }}
+      </a>
+    {{- end }}
+  {{- end }}
+</div>

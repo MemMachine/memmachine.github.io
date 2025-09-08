@@ -1951,3 +1951,21 @@ footer p {
 .social-icon {
   margin-top: 20px;
 }
+
+/* ======================================
+ * Header Social Icons
+/* ====================================== */
+.header-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Adjust spacing as needed */
+}
+
+.header-social-icons a {
+  color: var(--light-300);
+  font-size: 20px; /* Adjust size as needed */
+}
+
+.header-social-icons a:hover {
+  color: var(--lavender);
+}

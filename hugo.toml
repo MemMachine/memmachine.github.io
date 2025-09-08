@@ -75,6 +75,21 @@ tags = 'tags'
     url = 'http://docs.memmachine.ai'
     weight = 70
 
+  # Social media links for the top nav
+  [[menus.social]]
+    name = "Discord"
+    url = "https://discord.gg/usydANvKqD"
+    weight = 10
+    [menus.social.params]
+      icon = "discord"
+
+  [[menus.social]]
+    name = "GitHub"
+    url = "https://github.com/MemMachine/MemMachine"
+    weight = 20
+    [menus.social.params]
+      icon = "github"
+
   # Footer Product menu
   [[menus.footerProduct]]
     name = 'Examples'
