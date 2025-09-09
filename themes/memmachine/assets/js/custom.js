@@ -192,7 +192,7 @@ if (chatList) {
           addMessage({
             sender: "MemMachine Agent",
             time: currentTime,
-            text: `Great! The best way to get started is with our comprehensive <a href="https://docs.memmachine.ai" target="_blank">documentation</a>. You can also <a href="https://discord.memmachine.ai" target="_blank">join our Discord server</a> to collaborate with other developers, or <a href="https://playground.memmachine.ai" target="_blank">try the Playground</a> to see a live demo.`,
+            text: `Great! The best way to get started is with our comprehensive <a href="https://docs.memmachine.ai" target="_blank">documentation</a>. You can also <a href="https://discord.memmachine.ai" target="_blank">join our Discord server</a> to collaborate with other developers, or <a href="hhttps://memmachine.ai/playground/" target="_blank">try the Playground</a> to see a live demo.`,
           });
         } else if (isNegative) {
           addMessage({
