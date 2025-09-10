@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap links for the site including multilingual variants
+Sitemap: {{ "sitemap.xml" | absURL }}
+{{ range .Site.Languages }}
+Sitemap: {{ printf "/%s/sitemap.xml" .Lang | absURL }}
+{{ end }}

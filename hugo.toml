@@ -6,6 +6,8 @@ theme = 'memmachine'
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
+enableRobotsTXT = true
+
 [permalinks]
 blogs = "/blog/:year/:month/:title/"
 
