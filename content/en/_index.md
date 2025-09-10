@@ -1,22 +1,22 @@
 ---
-title: "Blog"
-
+title: "MemMachine - The Open-Source Memory Layer for AI Agents"
+date: 2024-09-09
 description: "MemMachine is the open-source memory layer for advanced AI agents, enabling them to learn, remember, and adapt. Build personalized, context-aware applications that store long-term conversational memory and user preferences."
 canonical: "https://memmachine.ai/"
 
 # OpenGraph (Facebook) Metadata
-og_title: "MemMachine Blogs - The Open-Source Memory Layer for AI Agents"
+og_title: "MemMachine - The Open-Source Memory Layer for AI Agents"
 og_description: "MemMachine is the open-source memory layer for advanced AI agents, enabling them to learn, remember, and adapt. Build personalized, context-aware applications that store long-term conversational memory and user preferences."
 og_url: "https://memmachine.ai/"
-og_type: "blog"
+og_type: "website"
 og_site_name: "MemMachine"
 og_image: "https://memmachine.ai/img/logo.png"
 og_image_alt: "MemMachine AI Logo"
 
 # Twitter Card Metadata
 twitter_card: "summary_large_image"
-#twitter_site: "@memmachineai"
-twitter_title: "MemMachine Blogs - Open-Source Memory for AI"
+twitter_site: "@memmachineai"
+# twitter_title: "MemMachine - Open-Source Memory for AI"
 twitter_description: "Build advanced, personalized AI agents that remember. MemMachine is the open-source memory layer that enables long-term memory and learning for any LLM."
 twitter_image: "https://memmachine.ai/img/logo.png"
 twitter_image_alt: "MemMachine AI Logo"
@@ -34,5 +34,3 @@ schema_ld: |
     ]
   }
 ---
-
-Welcome to the MemMachine blog, your essential resource for building with the next generation of AI memory. Here you'll find product announcements, in-depth technical guides, and news from the forefront of open-source agent development.
