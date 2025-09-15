@@ -25,18 +25,6 @@
     {{ end }}
   </div>
 
-  {{/* --- ARCHIVES --- */}}
-  <h4 style="margin: 60px 0 36px 0; border-bottom: 1px solid rgb(31, 31, 50);" data-aos="fade-up" data-aos-duration="1000">
-    Archives
-  </h4>
-  <div class="taxonomy-list" data-aos="fade-up" data-aos-duration="1000">
-      {{ range (where site.RegularPages "Section" "blog").GroupByDate "January 2006" }}
-          {{ $firstPage := index .Pages 0 }}
-          {{ $url := printf "/blog/%d/%s/" $firstPage.Date.Year ($firstPage.Date.Format "01") }}
-          <a href="{{ $url | relLangURL }}" class="taxonomy-button">{{ .Key }}</a>
-      {{ end }}
-  </div>
-
   {{/* --- TAGS --- */}}
   <h4 style="margin: 60px 0 36px 0; border-bottom: 1px solid rgb(31, 31, 50);" data-aos="fade-up" data-aos-duration="1000">
     Tags
