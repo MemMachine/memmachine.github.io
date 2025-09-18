@@ -1969,3 +1969,62 @@ footer p {
 .header-social-icons a:hover {
   color: var(--lavender);
 }
+
+/* ======================================
+ *  Tables
+/* ====================================== */
+/* Style all Markdown tables inside blog containers */
+.blog-content table,
+.blog-text table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: #222734;
+  color: #EAEFFF;
+  font-size: 0.98rem;
+  box-shadow: 0 1px 4px rgba(27,26,39,0.07);
+}
+
+.blog-content table thead th,
+.blog-text table thead th {
+  background: #2D3447;
+  border-bottom: 2px solid #384057;
+  border-right: 1.5px solid #384057; /* vertical line */
+  font-weight: 600;
+  color: #EAEFFF;
+  padding: 0.85em;
+}
+
+/* Remove right border from last header to avoid double lines */
+.blog-content table thead th:last-child,
+.blog-text table thead th:last-child {
+  border-right: none;
+}
+
+.blog-content table td,
+.blog-text table td {
+  padding: 0.85em;
+  border: 1px solid #384057;
+  vertical-align: top;
+}
+
+.blog-content table tbody tr:nth-child(even),
+.blog-text table tbody tr:nth-child(even) {
+  background: #23293A;
+}
+
+.blog-content table tbody tr:hover,
+.blog-text table tbody tr:hover {
+  background: #27436B;
+  transition: background 0.14s;
+}
+
+.blog-content table td:last-child,
+.blog-text table td:last-child {
+  color: #98A8D6; /* subtle highlight for totals/numbers */
+}
+
+.blog-content table td strong,
+.blog-text table td strong {
+  color: #27B2E4; /* accent for important values */
+}
