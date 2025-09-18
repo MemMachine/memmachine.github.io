@@ -9,7 +9,7 @@ defaultContentLanguageInSubdir = false
 enableRobotsTXT = true
 
 [permalinks]
-blogs = "/blog/:year/:month/:title/"
+blog = "/blog/:year/:month/:title/"
 
 [languages]
 
