@@ -21,3 +21,7 @@
 {{ partial "head/seo-metadata.html" . }}
 <!-- Analytics -->
 {{ partial "head/analytics.html" . }}
+
+{{ if .Param "math" }}
+  {{ partialCached "math.html" . }}
+{{ end }}
