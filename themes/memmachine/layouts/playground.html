@@ -4,7 +4,7 @@
   =========================================================-->
   <div class="hero-area">
     <div class="container">
-      <div data-aos="fade-up" data-aos-duration="1000">
+      <div>
         <div class="row">
           <div class="col-md-12">
             <h1 class="title">
@@ -24,28 +24,41 @@
   =========================================================-->
   <div class="container">
     <div class="row">
-      <div class="col-md-12" data-aos="fade-up" data-aos-duration="1000">
+      <div class="col-md-12">
         <div class="ready-section" style="margin: 100px 0;">
-          <h2 class="title-2">We're <span>Building</span> Something <span>Amazing</span></h2>
-          <p>
-            Our Playground is getting a major upgrade to give you an even better experience.
-          </p>
-          <p>
-            We're working hard to make it worth the wait! While you're waiting, please explore these resources to start your journey.
-          </p>
-
-          <div class="hero-btn">
-            <div data-aos="fade-up" data-aos-duration="1000" class="aos-init aos-animate">
-              <a href="https://docs.memmachine.ai/getting_started" class="btn btn-primary mx-2 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">Read the Docs
-              </a>
-              <a href="https://discord.gg/usydANvKqD" class="btn btn-primary mx-2 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">Let's Chat on Discord
-              </a>
-            </div>
-          </div>
+          <h2 class="title-2">How to Use the <span>MemMachine Playground</span></h2>
+          <p class="mx-auto" style="max-width: 800px; line-height: 1.8;">To get started with the MemMachine Playground, follow these simple steps.</p>      
+          <ol class="list-decimal text-left mx-auto" style="max-width: 800px; line-height: 1.8;">
+            <li class="mb-5">
+              <p>Click the "Go to Playground" button.</p>
+              <div class="hero-btn mt-12">
+                <div>
+                  <a href="https://playground.memmachine.ai/" class="btn btn-primary mx-2" style="background-color: #5d5dd4;" target="_blank">Go to Playground</a>
+                </div>
+              </div>
+            </li>
+            <li class="mb-5">
+              <p>On the login page, click "Continue with Google" to create a secure account and log in. The email and password feature is not enabled.</p>
+              <img src="/img/playground_signin_with_OAuth.png" alt="Continue with Google button" style="width: 100%; max-width: 400px; margin-top: 10px; border-radius: 8px;">
+            </li>
+            <li class="mb-5">
+              <p>In the model selection dropdown at the top of the page, click the '+' to add both of these models to create a side-by-side comparison:</p>
+              <ul class="list-disc ml-6 mt-2">
+                <li><span class="highlight-text-gradient">gpt-4.1-mini:</span> This model has no memory and will not remember information in a new chat session.</li>
+                <li><span class="highlight-text-gradient">gpt-4.1-mini-memory:</span> This model uses the power of MemMachine to remember facts and information within and across chat sessions.</li>
+              </ul>
+              <img src="/img/playground_select_models.png" alt="Model selection dropdown with two models" style="width: 100%; max-width: 500px; margin-top: 10px; border-radius: 8px;">
+            </li>
+            <li class="mb-5">
+              <p>Once both models are added, you can start chatting. You can compare the response from both models simultaneously.</p>
+              <img src="/img/playground_side-by-side-chat-session.png" alt="Side-by-side chat session for A/B testing" style="width: 100%; max-width: 500px; margin-top: 10px; border-radius: 8px;">
+            </li>
+            <li class="mb-5">
+              <p>Start a new chat session by clicking the "New Chat" button on the left sidebar. Continue chatting. You will notice the <span class="highlight-text-gradient">gpt-4.1-mini</span> forgets everything from the previous session(s), whereas the <span class="highlight-text-gradient">gpt-4.1-mini-memory</span> retains context and information from all prior sessions.</p>
+          </ol>
 
         </div>
       </div>
     </div>
   </div>
-
 {{ end }}
