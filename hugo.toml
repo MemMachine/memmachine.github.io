@@ -30,11 +30,23 @@ authors = 'authors'
 categories = 'categories'
 tags = 'tags'
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
+
 [params]
   description = "MemMachine is an open-source memory layer for advanced AI agents. It enables AI to learn, store, and recall data and preferences from past interactions, creating sophisticated, personalized user profiles."
   
   # Your Google Analytics ID (e.g., "G-XXXXXXXXXX")
   googleAnalytics = "G-G0GZQH4153" 
+
+  # Enable Math Markdown
+  math = true
 
   [params.social]
     discord = "https://discord.gg/usydANvKqD"
