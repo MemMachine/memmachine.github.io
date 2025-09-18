@@ -5,6 +5,8 @@ featured_image: "featured_image.png"
 tags: ["AI Agent", "LoCoMo Benchmark", "Generative AI", "LLM", "Agent Memory", "featured"]
 author: "The MemMachine Team"
 description: "In a groundbreaking performance result, MemMachine reaches new heights on the challenging LoCoMo benchmark, setting a new standard for long-term conversational memory in AI agents. Discover how our multi-layered memory system is revolutionizing the field."
+aliases:
+  - /blog/2025/09/locomo-results/
 ---
 
 In their paper, "[Evaluating Very Long-Term Conversational Memory of LLM Agents](https://arxiv.org/abs/2402.17753)", Snap researchers introduced the open-source [LoCoMo benchmark](https://github.com/snap-research/LoCoMo). LoCoMo provides a new standard for evaluating the true long-term conversational memory of AI agents.

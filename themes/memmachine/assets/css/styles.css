@@ -1657,6 +1657,15 @@ footer p {
  *  15. Custom
 /* ====================================== */
 
+/* Gradient text effect for highlighted text */
+.highlight-text-gradient {
+  background: var(--gradient-lavender-pink-peach);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
 /* Container for the tags and read-more link */
 .card-footer {
   display: flex;
