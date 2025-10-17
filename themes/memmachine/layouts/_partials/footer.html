@@ -24,6 +24,7 @@
         </div>
         {{- end }}
         {{- with site.Menus.footercompany }}
+        <!-- 
         <div class="col-md-4">
           <div class="footer-item">
             <h2>Company</h2>
@@ -34,9 +35,10 @@
             </ul>
           </div>
         </div>
+        -->  
         {{- end }}
         {{- with site.Menus.footercommunity }}
-        <div class="col-md-4">
+        <div class="col-md-6">
           <div class="footer-item">
             <h2>Community</h2>
             <ul>
@@ -44,7 +46,7 @@
               <li>
                 <a href="{{ .URL }}" target="_blank" rel="noopener">
                   {{- with .Params.icon }}
-                  <i class="fab fa-{{ . }}" aria-hidden="true"></i> 
+                  <i class="{{ . }}" aria-hidden="true"></i> 
                   {{- end }}
                   {{ .Name }}
                 </a>
