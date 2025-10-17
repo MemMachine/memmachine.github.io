@@ -166,14 +166,28 @@ tags = 'tags'
     url = 'https://github.com/MemMachine/MemMachine'
     weight = 20
     [menus.footerCommunity.params]
-      icon = "github"
+      icon = "fa-brands fa-github"
 
   [[menus.footerCommunity]]
     name = 'Discord'
     url = 'https://discord.gg/usydANvKqD'
     weight = 30
     [menus.footerCommunity.params]
-      icon = "discord"
+      icon = "fa-brands fa-discord"
+
+  [[menus.footerCommunity]]
+    name = 'Ambassador Program'
+    pageRef = '/community-ambassador-program'
+    weight = 40
+    [menus.footerCommunity.params]
+      icon = "fa-solid fa-hippo"
+
+  [[menus.footerCommunity]]
+    name = 'Student Ambassador Program'
+    pageRef = '/community-student-ambassador-program'
+    weight = 40
+    [menus.footerCommunity.params]
+      icon = "fa-solid fa-graduation-cap"
 
   # Footer Legal menu
   [[menus.legal]]
