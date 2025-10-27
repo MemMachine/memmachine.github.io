@@ -4,7 +4,7 @@
   =========================================================-->
   <div class="hero-area">
     <div class="container">
-      <div data-aos="fade-up" data-aos-duration="1000">
+      <div>
         <div class="row">
           <div class="col-md-12">
             <h1 class="title">
@@ -22,7 +22,7 @@
                           POLICY
   =========================================================-->
   <div class="policy-area mt-192">
-    <div class="container" data-aos="fade-up" data-aos-duration="1000">
+    <div class="container">
       <div class="row">
         <div class="col-md-4">
           <div class="pills-tab" role="tablist" aria-orientation="vertical">
@@ -31,8 +31,6 @@
                 class="nav-link {{ if eq $index 0 }}active{{ end }}"
                 data-bs-toggle="pill"
                 data-bs-target="#pill-{{ $index }}"
-                data-aos="fade-up"
-                data-aos-duration="1000"
               >
                 {{ $section.title }}
               </button>
@@ -47,10 +45,10 @@
                 id="pill-{{ $index }}"
                 role="tabpanel"
               >
-                <h3 data-aos="fade-up" data-aos-duration="1000">
+                <h3>
                   {{ $section.title }}
                 </h3>
-                <div data-aos="fade-up" data-aos-duration="1000">
+                <div>
                   {{ $section.content | safeHTML }}
                 </div>
               </div>
