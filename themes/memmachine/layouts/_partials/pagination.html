@@ -1,6 +1,6 @@
 {{ $paginator := .Paginator }}
 {{ if gt $paginator.TotalPages 1 }}
-<div class="slide-btn" data-aos="fade-up" data-aos-duration="1000">
+<div class="slide-btn">
 
   {{ if $paginator.HasPrev }}
   <a href="{{ $paginator.Prev.URL }}" class="slider">Previous</a>

@@ -1,6 +1,6 @@
 <div class="faq-area mx-850 mtb-192 mx-auto">
   <div class="container">
-    <div data-aos="fade-up" data-aos-duration="1000">
+  <div>
       <div class="row">
         <div class="col-md-12">
           <h2 class="title-2">Frequently Asked <span>Questions</span></h2>
@@ -15,7 +15,7 @@
             {{/* Dynamically calculate the animation duration for a staggered effect */}}
             {{ $duration := add 200 (mul $index 100) }}
             
-            <div data-aos="fade-up" data-aos-duration="{{ $duration }}">
+            <div>
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button {{ if ne $index 0 }}collapsed{{ end }}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ $index }}" aria-expanded="{{ if eq $index 0 }}true{{ else }}false{{ end }}" aria-controls="collapse-{{ $index }}">

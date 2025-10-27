@@ -1,6 +1,3 @@
-{{/* Load the AOS vendor script directly from the static folder */}}
-<script src="{{ `/js/aos.min.js` | relURL }}" defer></script>
-
 {{/* Get and bundle our custom application code */}}
 {{- $jsFiles := slice 
     (resources.Get "js/custom.js") 
