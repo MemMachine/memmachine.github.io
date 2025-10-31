@@ -145,9 +145,7 @@ if (chatList) {
   
   // New function to load the entire conversation history
   function loadConversationHistory() {
-    let delay = 0;
-    for (let i = 0; i < scriptedMessages.length; i++) {
-      setTimeout(() => {
+      for (let i = 0; i < scriptedMessages.length; i++) {
         const currentTime = new Date().toLocaleTimeString([], {
           hour: "2-digit",
           minute: "2-digit",
@@ -157,9 +155,7 @@ if (chatList) {
           time: currentTime,
           text: scriptedMessages[i].text,
         });
-      }, delay);
-      delay += 500; // Reduced delay for a faster feel
-    }
+      }
     // Set the state to 1 after the initial conversation loads,
     // so the next message from the user is a response to the question.
     chatState = 1;
