@@ -19,7 +19,7 @@
     {{ end }}
 
     <a href="{{ .Permalink }}">
-      <img src="{{ $image_url }}" alt="{{ .Title }}" class="img-fluid" />
+      <img src="{{ $image_url }}" alt="{{ .Title }}" class="img-fluid" loading='lazy'/>
     </a>
   {{ end }}
 
