@@ -34,7 +34,7 @@
             {{ range seq 2 }}
               {{ range $rowLogos }}
                 <div class="logo-scroller-item">
-                  <img src="{{ .src }}" alt="{{ .name }}" />
+                  <img src="{{ .src }}" alt="{{ .name }}" loading='lazy'/>
                 </div>
               {{ end }}
             {{ end }}

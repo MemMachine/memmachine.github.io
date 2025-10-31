@@ -14,9 +14,9 @@
             {{ end }}
 
             {{ if $featuredImage }}
-              <img src="{{ $featuredImage.RelPermalink }}" alt="{{ $.Title }}" />
+              <img src="{{ $featuredImage.RelPermalink }}" alt="{{ $.Title }}" loading='lazy'/>
             {{ else }}
-              <img src="{{ `/img/blog-details.png` | relURL }}" alt="{{ $.Title }}" />
+              <img src="{{ `/img/blog-details.png` | relURL }}" alt="{{ $.Title }}" loading='lazy'/>
             {{ end }}
             
             <div>
