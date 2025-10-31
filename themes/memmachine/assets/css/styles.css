@@ -496,27 +496,7 @@ header nav ul li a:hover {
   initial-value: 0deg;
   inherits: false;
 }
-.hero-chat::after,
-.hero-chat::before {
-  content: '';
-  position: absolute;
 
-  background-image: conic-gradient(
-    from var(--angle),
-    transparent 88%,
-    #a570ff,
-    #ff6eb2,
-    #ffad66 100%
-  );
-  inset: -2px;
-  z-index: -1;
-  border-radius: 10px;
-  animation: 12s spin linear infinite;
-}
-
-.hero-chat::before {
-  opacity: 0.7;
-}
 
 @keyframes spin {
   from {
