@@ -1,0 +1,87 @@
+{{/* testimonials.html partial - displays company testimonials using card design */}}
+
+<section class="testimonials-section mtb-192">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        {{ $section := .Site.GetPage "Section" "testimonials" }}
+        <h2 class="title-2">{{ with $section.Params.title }}{{ . }}{{ else }}Trusted by teams <span>building with MemMachine.</span>{{ end }}</h2>
+        <!-- <p class="subtitle">{{ with $section.Params.subtitle }}{{ . }}{{ else }}Real feedback from teams using MemMachine{{ end }}</p> -->
+      </div>
+    </div>
+    <div class="testimonials-list row justify-content-center">
+      {{ $max := .max | default 4 }}
+      {{/* 1. Get all pages from the "testimonials" section */}}
+      {{ $all_testimonials := where site.RegularPages "Section" "testimonials" }}
+
+      {{/* 2. Create an empty list to hold only testimonials that are not drafts */}}
+      {{ $published_testimonials := slice }}
+      {{ range $all_testimonials }}
+        {{ if not .Params.draft }}
+          {{ $published_testimonials = $published_testimonials | append . }}
+        {{ end }}
+      {{ end }}
+
+      {{/* 3. Set the testimonials to be displayed */}}
+      {{ $testimonials_to_display := $published_testimonials | first $max }}
+
+      {{/* --- End Logic --- */}}
+
+      {{ if gt (len $testimonials_to_display) 0 }}
+        {{ range $testimonials_to_display }}
+          {{ $page := . }}
+          <div class="col-md-4 mb-4">
+            <div class="insight-single-card testimonial-card">
+              {{ $image_path := $page.Params.logo }}
+              {{ $image_url := "" }}
+              {{ if $image_path }}
+                {{ if strings.HasPrefix $image_path "http" }}
+                  {{ $image_url = $image_path }}
+                {{ else }}
+                  {{ $image_resource := $page.Resources.GetMatch $image_path }}
+                  {{ if $image_resource }}
+                    {{ $image_url = $image_resource.RelPermalink }}
+                  {{ else }}
+                    {{ $image_url = $image_path | relURL }}
+                  {{ end }}
+                {{ end }}
+              {{ end }}
+              {{ if $image_url }}
+                {{ with $page.Params.company_url }}
+                  <a href="{{ . }}" target="_blank" rel="noopener">
+                    <img src="{{ $image_url }}" alt="{{ $page.Params.company }} logo" class="testimonial-logo" loading="lazy" style="height: 70px; width: auto; max-width: 100%; display: block; margin-left: auto; margin-right: auto; object-fit: contain;"/>
+                  </a>
+                {{ else }}
+                  <img src="{{ $image_url }}" alt="{{ $page.Params.company }} logo" class="testimonial-logo" loading="lazy" style="height: 70px; width: auto; max-width: 100%; display: block; margin-left: auto; margin-right: auto; object-fit: contain;"/>
+                {{ end }}
+              {{ else }}
+                {{ with $page.Params.company_url }}
+                  <h3 class="title-3 testimonial-company" style="margin-bottom: 37px;"><a href="{{ . }}" target="_blank" rel="noopener" style="color: var(--light-700);">{{ $page.Params.company }}</a></h3>
+                {{ else }}
+                  <h3 class="title-3 testimonial-company" style="margin-bottom: 37px;">{{ $page.Params.company }}</h3>
+                {{ end }}
+              {{ end }}
+              <div class="testimonial-content">
+                <blockquote>{{ $page.Content }}</blockquote>
+                <div class="testimonial-meta">
+                  <span class="testimonial-author">{{ $page.Params.author }}</span>
+                  <span class="testimonial-company">,
+                  {{ with $page.Params.company_url }}
+                    <a href="{{ . }}" target="_blank" rel="noopener">{{ $page.Params.company }}</a>
+                  {{ else }}
+                    {{ $page.Params.company }}
+                  {{ end }}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        {{ end }}
+      {{ else }}
+        <div class="col-md-12 text-center">
+          <p>No testimonials available.</p>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
