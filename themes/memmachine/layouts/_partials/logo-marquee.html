@@ -1,13 +1,13 @@
 {{/* Define configuration variables */}}
 {{ $logos := site.Data.logos }}
-{{ $logosPerRow := 8 }}
-{{ $maxRows := 3 }}
+{{ $logosPerRow := 12 }}
+{{ $maxRows := 2 }}
 
 {{ if $logos }}
 <section class="container my-5 py-5 text-center">
   <div class="row">
     <div class="col-md-8 mx-auto">
-      <h2 class="title-2">Trusted By The Most <span>Innovative</span> Teams</h2>
+      <h2 class="title-2">Trusted By The Most <span>Innovative Teams</span></h2>
       <p>
         MemMachine provides the memory layer for agents built by world-class engineering teams at the forefront of the AI revolution.
       </p>
@@ -34,7 +34,14 @@
             {{ range seq 2 }}
               {{ range $rowLogos }}
                 <div class="logo-scroller-item">
-                  <img src="{{ .src }}" alt="{{ .name }}" loading='lazy'/>
+                  {{ $logoSrc := .src }}
+                  {{ if $logoSrc }}
+                    {{ if strings.HasPrefix $logoSrc "http" }}
+                      <img src="{{ $logoSrc }}" alt="{{ .name }}" loading='lazy' style="height: 40px; width: auto; object-fit: contain;"/>
+                    {{ else }}
+                      <img src="{{ $logoSrc | relURL }}" alt="{{ .name }}" loading='lazy' style="height: 40px; width: auto; object-fit: contain;"/>
+                    {{ end }}
+                  {{ end }}
                 </div>
               {{ end }}
             {{ end }}
