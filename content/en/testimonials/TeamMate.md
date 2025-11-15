@@ -1,7 +1,7 @@
 ---
 title: "Amazing Results with MemMachine"
 date: 2025-11-10T17:40:16-06:00
-author: "Brandon Monroe"
+author: "CEO"
 company: "TeamMate"
 company_url: "https://teammate.app/"
 logo: "https://www.teamate.app/_next/image?url=%2Fimages%2Fteamate.png&w=48&q=75"
