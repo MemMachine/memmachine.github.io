@@ -1,3 +1,5 @@
+# Python virtual environment directory
+.venv/
 # Generated files by hugo
 /public/
 /resources/_gen/
