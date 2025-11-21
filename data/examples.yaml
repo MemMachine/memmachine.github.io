@@ -1,3 +1,18 @@
+- title: Character Engine
+  icon: "fa-solid fa-chess-board"
+  text: "Persistent AI advisors who learn your patterns, challenge your strategy, and make sure you're building the right thing BEFORE you execute."
+  url: "https://characterengine.ai/"
+
+- title: Teamate
+  icon: "fa-solid fa-mug-hot"
+  text: "Your Proactive AI Teammate that Lives in Your Workspace — Teamate understands conversations, and steps in with the right action at just the right moment."
+  url: "https://www.teamate.app/"
+
+- title: Build to Launch
+  icon: "fa-solid fa-rocket"
+  text: "Turn AI ideas into shipped products. Proven systems and showcase opportunities for builders who launch."
+  url: "https://buildtolaunch.substack.com/"
+  
 - title: Your CRM Assistant
   icon: "fa-solid fa-user"
   text: "Your agent can recall a client's entire history and deal stage, proactively helping your sales team build relationships and close deals faster."
