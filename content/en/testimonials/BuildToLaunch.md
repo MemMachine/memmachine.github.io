@@ -8,4 +8,4 @@ logo: "https://substackcdn.com/image/fetch/$s_!-Gdw!,w_1360,c_limit,f_webp,q_aut
 draft: false
 ---
 
-Profile memory is my favorite part. I've been storing and retrieving many of my articles through MemMachine, and the way it handles personalization is beautiful. Instead of creating another slash command or digging through every file I've saved, the profile memory just knows. It's there when I need it. What I really love is that they've abstracted all the complexity away while leaving the flexibility to use pieces independently. That's the sweet spot - powerful but not overwhelming.
+<i>"Profile memory is my favorite part. I've been storing and retrieving many of my articles through MemMachine, and the way it handles personalization is beautiful. Instead of creating another slash command or digging through every file I've saved, the profile memory just knows. It's there when I need it. What I really love is that they've abstracted all the complexity away while leaving the flexibility to use pieces independently. That's the sweet spot - powerful but not overwhelming."</i>
