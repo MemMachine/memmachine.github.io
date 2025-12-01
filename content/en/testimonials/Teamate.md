@@ -2,7 +2,11 @@
 title: "Amazing Results with MemMachine"
 date: 2025-11-10T17:40:16-06:00
 author: "CEO"
+<<<<<<< HEAD:content/en/testimonials/TeamMate.md
 company: "TeamMate"
+=======
+company: "Teamate"
+>>>>>>> 76d64ad (Fix typo in compan name; TeamMate -> Teammate):content/en/testimonials/Teamate.md
 company_url: "https://teamate.app/"
 logo: "https://www.teamate.app/_next/image?url=%2Fimages%2Fteamate.png&w=48&q=75"
 draft: false
