@@ -1,44 +1,54 @@
 ---
-title: "MemMachine v0.2 release - Locomo benchmark results"
+title: "MemMachine v0.2 Delivers Top Scores and Efficiency on Locomo Benchmark"
 date: 2025-12-01T13:22:00-08:00
 featured_image: "featured_image.png"
 tags: ["AI Agent", "LoCoMo Benchmark", "Generative AI", "LLM", "Agent Memory", "featured"]
-author: "The MemMachine Team"
-description: "This paper presents the results of the Mem0 evaluation of Locomo benchmark for the v0.2 release of memMachine."
+author: "Tom Wong"
+description: "This blog presents the results of the Mem0 evaluation of Locomo benchmark for the v0.2 release of MemMachine."
 aliases:
   - /blog/2025/12/locomo-results-v0.2/
 ---
 
-# MemMachine v0.2 release - Locomo benchmark results
 
 ## Introduction
 
-This paper presents the results of the Mem0 evaluation of Locomo benchmark for the v0.2 release of memMachine.  This new release delivers significant improvements over the previous release v0.1.5 in many aspects of the memory system.
+In their paper, "[Evaluating Very Long-Term Conversational Memory of LLM Agents](https://arxiv.org/abs/2402.17753)", Snap researchers introduced the open-source [LoCoMo benchmark](https://github.com/snap-research/LoCoMo). LoCoMo provides a new standard for evaluating the true long-term conversational memory of AI agents.
+
+[Mem0](https://mem0.ai/) introduced us to their [evaluation of the Locomo benchmark](https://github.com/mem0ai/mem0).  The project uses the Locomo dataset to compare benchmark scores with different memory systems.
+
+This blog presents the results of the Mem0 evaluation of Locomo benchmark for the v0.2 release of MemMachine.  This new release delivers significant improvements over the [previous release v0.1.5](https://memmachine.ai/blog/2025/09/memmachine-reaches-new-heights-on-locomo/) in many aspects of the memory system.
 
 The test environment is setup as follows.
 
+
+### Code for the benchmark
+
+The code for the benchmark is obtained from [Mem0 evaluation of the Locomo benchmark](https://github.com/mem0ai/mem0/tree/main/evaluation).
+The dataset for the benchmark is obtained from [Snap Research Locomo repo](https://github.com/snap-research/locomo/tree/main/data).
+
+
 ### Eval-LLM
 
-The eval-LLM is the chat LLM that is used to answer the questions in the Locomo benchmark.  The choice of eval-LLM can significantly influence the resulting score.  The Mem0 evaluation of Locomo benchmark historically uses the OpenAI gpt-4o-mini as the eval-LLM.  To compare different products, the eval-LLM will be the same for all products under test.
+The eval-LLM is the chat LLM that is used to answer the questions in the Locomo benchmark.  The choice of eval-LLM can significantly influence the resulting score.  The Mem0 evaluation of Locomo benchmark historically uses the OpenAI gpt-4o-mini as the default eval-LLM for evaluation.  To compare different memory systems, the eval-LLM will be the same for all memory systems under test.
 
-Since the original Mem0 evaluation of Locomo benchmark was published, the newer OpenAI gpt-4.1-mini LLM was introduced.  In this paper, we also do a comparison between the original gpt-4o-mini and the newer gpt-4.1-mini when used as the eval-LLM.
+Since the original Mem0 evaluation of Locomo benchmark was published, the newer OpenAI gpt-4.1-mini LLM was introduced.  In this blog, we also do a comparison between the original gpt-4o-mini and the newer gpt-4.1-mini when used as the eval-LLM.
 
 
 ### Vector DB embedder
 
-When using a memory system, the embedder is the essential element that is used to index the memories in a chat history.  The embedder facilitates the retrieval of saved memories to correctly and factually answer questions.  The choice of embedder can significantly influence the quality of the answers provided by the memory system.  The Mem0 evaluation of Locomo benchmark historically uses the OpenAI text-embedding-3-small embedder.  To compare different products, the embedder will be the same for all products under test.
+When using a memory system, the embedder is the essential element that is used to index the memories in a chat history.  The embedder facilitates the retrieval of saved memories to correctly and factually answer questions.  The choice of embedder can significantly influence the quality of the answers provided by the memory system.  The Mem0 evaluation of Locomo benchmark historically uses the OpenAI text-embedding-3-small as the default embedder for evaluation.  To compare different memory systems, the embedder will be the same for all memory systems under test.
 
 
 ### Judge-LLM
 
 The judge-LLM is the chat LLM that is used to judge if the response from the eval-LLM correctly answers the question in the Locomo benchmark.
 
-The choice of judge-LLM can significantly influence the resulting score.  Different LLMs may give false positives or false negatives when judging the same response.  The Mem0 evaluation of Locomo benchmark historically uses the OpenAI gpt-4o-mini as the judge-LLM.  To compare different products, the judge-LLM will be the same for all products under test.
+The choice of judge-LLM can significantly influence the resulting score.  Different LLMs may give false positives or false negatives when judging the same response.  The Mem0 evaluation of Locomo benchmark historically uses the OpenAI gpt-4o-mini as the default judge-LLM for evaluation.  To compare different memory systems, the judge-LLM will be the same for all memory systems under test.
 
 
 ### Reranker
 
-When using a memory system, the reranker is an element that is used to re-evaluate the best matching memories that were retrieved by the embedder.  The reranker will re-sort the retrieved results moving the best results to the top.  The reranker provides a second level of evaluation, providing the best set of saved memories to correctly and factually answer questions.  The choice of reranker can significantly influence the quality of the answers provided by the memory system.  The MemMachine v0.2 uses the AWS cohere.rerank-v3-5:0 as the reranker for the Locomo benchmark.
+When using a memory system, the reranker is an element that is used to re-evaluate the best matching memories that were retrieved by the embedder.  The reranker will re-sort the retrieved results moving the best results to the top.  The reranker provides a second level of evaluation, providing the best set of saved memories to correctly and factually answer questions.  The choice of reranker can significantly influence the quality of the answers provided by the memory system.  The MemMachine v0.2 uses the AWS cohere.rerank-v3-5:0 as the reranker for the Mem0 evaluation of Locomo benchmark.
 
 
 ### Question categories
@@ -60,7 +70,11 @@ The judge-LLM will evaluate each question from the categories, and for each ques
 
 ### Memory and agent modes
 
-The MemMachine works in either memory mode or agent mode.  In memory mode, the MemMachine directly provides the context for a question being asked.  There is a single request to the eval-LLM for each question.  In agent mode, the MemMachine is presented as an OpenAI-agent to the eval-LLM.  When a question is given to the eval-LLM, the eval-LLM will use the MemMachine agent as a tool to retrieve the context for the question.  The eval-LLM may perform several rounds of requests to the MemMachine agent to formulate the best response.
+The MemMachine works in either memory mode or agent mode.
+
+In [memory mode](https://docs.memmachine.ai/install_guide/integrate/GPTStore), the MemMachine directly provides the context for a question being asked.  There is a single request to the eval-LLM for each question.
+
+In [agent mode](https://docs.memmachine.ai/core_concepts/agentic_workflow), the MemMachine is presented as an OpenAI-agent to the eval-LLM.  When a question is given to the eval-LLM, the eval-LLM will use the MemMachine agent as a tool to retrieve the context for the question.  The eval-LLM may perform several rounds of requests to the MemMachine agent to formulate the best response.
 
 
 ## LLM-score results
@@ -70,7 +84,7 @@ Here are the observed llm-scores for MemMachine v0.2.
 
 ### LLM-score using gpt-4o-mini
 
-The eval-LLM is gpt-4o-mini to compare against other memory products.
+The eval-LLM is gpt-4o-mini to compare against other memory systems.
 
 
 #### Memory mode (gpt-4o-mini)
@@ -114,6 +128,7 @@ Overall mean score
 
 
 ![Figure 1. MemMachine v0.2 llm-score gpt-4o-mini](memmachine-v0.2-llm_score-gpt-4o-mini.jpg)
+*Figure 1. MemMachine v0.2 llm-score gpt-4o-mini*
 
 
 ### LLM-score using gpt-4.1-mini
@@ -162,6 +177,7 @@ Overall mean score
 
 
 ![Figure 2. MemMachine v0.2 llm-score gpt-4.1-mini](memmachine-v0.2-llm_score-gpt-4.1-mini.jpg)
+*Figure 2. MemMachine v0.2 llm-score gpt-4.1-mini*
 
 
 ## Token usage results
@@ -177,6 +193,9 @@ Here are the observed token usage by MemMachine when in memory mode and in agent
 | mem0 main/HEAD gpt-4.1-mini memory mode | 19206707 | 14840 |
 
 ![Figure 3. MemMachine v0.2 token usage gpt-4.1-mini](memmachine-v0.2-token-usage.jpg)
+*Figure 3. MemMachine v0.2 token usage gpt-4.1-mini*
+
+MemMachine v0.2 retrieved the memories that provide the correct and factual responses to the questions using only a small fraction (about 20%) of the tokens used by Mem0.  This is a significant reduction in cost.  This will also reduce time-to-first-token, resulting in much faster responses to user queries.
 
 
 ## Search time results
@@ -186,15 +205,19 @@ The MemMachine v0.2 release has many new optimizations to the handling of episod
 There is approximately 75% reduction in add memory time compared to previous release.
 
 ![Figure 4. MemMachine v0.2 add memory time comparison](memmachine-v0.2-add-time.jpg)
+*Figure 4. MemMachine v0.2 add memory time comparison*
 
 
 There is up to 75% reduction in search memory time compared to previous release.
 
 ![Figure 5. MemMachine v0.2 search memory time comparison](memmachine-v0.2-search-time.jpg)
+*Figure 5. MemMachine v0.2 search memory time comparison*
+
+MemMachine v0.2 retrieved the memories that provide better responses to the questions compared to previous release, and provides much faster add memory and search memory times.  This results in much faster responses to user queries.
 
 
 ## Conclusion
 
-The new MemMachine v0.2 provides significant improvements over previous release, and is one of the highest scoring memory systems in the market.
+The new MemMachine v0.2 provides significant improvements over previous release, and is one of the highest scoring memory systems in the market.  The results show significant reduction in cost, as well as much faster response times to user queries.
 
 
