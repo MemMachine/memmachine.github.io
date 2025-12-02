@@ -57,12 +57,12 @@ The MemMachine v0.2 allows using a variety of rerankers.  It also allows using n
 
 The original LoCoMo benchmark has 5 categories of questions.  The Mem0 evaluation of LoCoMo benchmark uses questions from 4 of the 5 categories.  The categories used are as follows:
 
-| Category number | Description | Total Questions |
-| --------------- | ----------- | --------------- |
-| **1** | **Multi-Hop:** Questions that require synthesizing information from multiple sessions. | 96 |
-| **2** | **Temporal Reasoning:** Questions can be answered through temporal reasoning and capturing time-related data cues within the conversation. | 321 |
-| **3** | **Open-Domain:** Questions can be answered by integrating a speaker’s provided information with external knowledge, such as commonsense or world facts. | 841 |
-| **4** | **Single-Hop:** Questions asking for specific facts directly mentioned in the single session conversation. | 282 |
+| Category number | Description |
+| --------------- | ----------- |
+| **1** | **Multi-Hop:** Questions that require synthesizing information from multiple sessions. |
+| **2** | **Temporal Reasoning:** Questions can be answered through temporal reasoning and capturing time-related data cues within the conversation. |
+| **3** | **Open-Domain:** Questions can be answered by integrating a speaker’s provided information with external knowledge, such as commonsense or world facts. |
+| **4** | **Single-Hop:** Questions asking for specific facts directly mentioned in the single session conversation. |
 
 
 ### LLM-score
