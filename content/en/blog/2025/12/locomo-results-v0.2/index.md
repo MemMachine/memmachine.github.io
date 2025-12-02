@@ -78,6 +78,7 @@ The eval-LLM is gpt-4o-mini to compare against other memory products.
 Mean score per category
 
 | Locomo category | bleu-score | f1-score | llm-score | count |
+| --------------- | ---------- | -------- | --------- | ----- |
 | 1.single hop | 0.1407 | 0.1993 | 0.8759 | 282 |
 | 2.temporal | 0.0977 | 0.1847 | 0.7352 | 321 |
 | 3.multi hop | 0.0871 | 0.1191 | 0.7083 | 96 |
@@ -85,6 +86,8 @@ Mean score per category
 
 Overall mean score
 
+| Category | Score |
+| -------- | ----- |
 | bleu-score | 0.1300 |
 | f1-score | 0.2200 |
 | llm-score | 0.8747 |
@@ -95,6 +98,7 @@ Overall mean score
 Mean score per category
 
 | Locomo category | bleu-score | f1-score | llm-score | count |
+| --------------- | ---------- | -------- | --------- | ----- |
 | 1.single hop | 0.1147 | 0.1684 | 0.8404 | 282 |
 | 2.temporal | 0.1402 | 0.2242 | 0.8069 | 321 |
 | 3.multi hop | 0.0666 | 0.1037 | 0.7396 | 96 |
@@ -102,6 +106,8 @@ Mean score per category
 
 Overall mean score
 
+| Category | Score |
+| -------- | ----- |
 | bleu-score | 0.1316 |
 | f1-score | 0.2210 |
 | llm-score | 0.8812 |
@@ -120,6 +126,7 @@ The newer gpt-4.1-mini provides better results than the previous LLM.  Here are 
 Mean score per category
 
 | Locomo category | bleu-score | f1-score | llm-score | count |
+| --------------- | ---------- | -------- | --------- | ----- |
 | 1.single hop | 0.1795 | 0.2497 | 0.8972 | 282 |
 | 2.temporal | 0.1521 | 0.2549 | 0.8910 | 321 |
 | 3.multi hop | 0.1059 | 0.1429 | 0.7500 | 96 |
@@ -127,6 +134,8 @@ Mean score per category
 
 Overall mean score
 
+| Category | Score |
+| -------- | ----- |
 | bleu-score | 0.1732 |
 | f1-score | 0.2785 |
 | llm-score | 0.9123 |
@@ -137,6 +146,7 @@ Overall mean score
 Mean score per category
 
 | Locomo category | bleu-score | f1-score | llm-score | count |
+| --------------- | ---------- | -------- | --------- | ----- |
 | 1.single hop | 0.1460 | 0.2125 | 0.8830 | 282 |
 | 2.temporal | 0.1363 | 0.2366 | 0.9159 | 321 |
 | 3.multi hop | 0.0744 | 0.1167 | 0.7188 | 96 |
@@ -144,6 +154,8 @@ Mean score per category
 
 Overall mean score
 
+| Category | Score |
+| -------- | ----- |
 | bleu-score | 0.1479 |
 | f1-score | 0.2503 |
 | llm-score | 0.9169 |
@@ -159,6 +171,7 @@ When using a memory system, the retrieved memories are added to the question whe
 Here are the observed token usage by MemMachine when in memory mode and in agent mode.  The Mem0 token usage is shown for comparison.
 
 | memory system | i_token | o_token |
+| ------------- | ------- | ------- |
 | memmachine v0.2 gpt-4.1-mini memory mode | 4199096 | 43169 |
 | memmachine v0.2 gpt-4.1-mini agent mode | 8571936 | 93210 |
 | mem0 main/HEAD gpt-4.1-mini memory mode | 19206707 | 14840 |
