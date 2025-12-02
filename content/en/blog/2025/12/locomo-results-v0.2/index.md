@@ -1,7 +1,7 @@
 ---
 title: "MemMachine v0.2 Delivers Top Scores and Efficiency on LoCoMo Benchmark"
 date: 2025-12-01T13:22:00-08:00
-featured_image: "featured_image.png"
+featured_image: "featured_image2.jpg"
 tags: ["AI Agent", "LoCoMo Benchmark", "Generative AI", "LLM", "Agent Memory", "featured"]
 author: "Tom Wong"
 description: "This blog presents the results of the Mem0 evaluation of LoCoMo benchmark for the v0.2 release of MemMachine."
