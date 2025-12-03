@@ -209,7 +209,7 @@ When using a memory system, the retrieved memories are added to the question whe
 
 Here are the observed token usage by MemMachine when in memory mode and in agent mode.  The Mem0 token usage is shown for comparison.
 
-| memory system | i_token | o_token |
+| memory system | input tokens | output tokens |
 | ------------- | ------- | ------- |
 | memmachine v0.2 gpt-4.1-mini memory mode | 4199096 | 43169 |
 | memmachine v0.2 gpt-4.1-mini agent mode | 8571936 | 93210 |
