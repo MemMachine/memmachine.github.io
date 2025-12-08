@@ -139,7 +139,6 @@ The reponse is split into `episodic_memory` which represents the actuall message
 
 The two other lists in the episodic memory are unused. They where meant to represent short term memory and a summary (which we'll encounter in v2).
 
-
 </td>
 <td width="50%" valign="top">
 
@@ -199,6 +198,7 @@ To group messages we're going to create a project (`POST /api/v2/projects`):
   }
 }
 ```
+
 </td>
 <td width="50%" valign="top">
 
@@ -266,7 +266,6 @@ The representation in Postgres shows the episodes...
 
 Searching for memories has improved in terms of how the query is structured and what the response is.
 
-
 <table>
 <tr>
 <td width="50%" valign="top">
@@ -284,6 +283,7 @@ Searching for memories has improved in terms of how the query is structured and 
     "types": ["episodic","semantic"]
 }
 ```
+
 </td>
 <td width="50%" valign="top">
 
