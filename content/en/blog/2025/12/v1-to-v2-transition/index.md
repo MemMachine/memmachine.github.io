@@ -147,7 +147,6 @@ The two other lists in the episodic memory are unused. They where meant to repre
 
 ```json
 [
-      [
       {
         "tag": "Geographic & Cultural Context",
         "feature": "former_residence_berlin",
@@ -188,7 +187,6 @@ To group messages we're going to create a project (`POST /api/v2/projects`):
 <td width="50%" valign="top">
 
 **Query**
-
 
 ```json
 {
@@ -316,7 +314,8 @@ Slightly different from before, but more structed.
 Short term and long term memory comprises of complete episodes. Short term more recent and long term provides the history.
 
 ```json
-"short_term_memory": {
+{
+  "short_term_memory": {
     "episodes": [
         {
         "content": "I like to play Minigolf on the weekends. Throughout the week I relax by playing tabletop games.",
@@ -330,6 +329,7 @@ Short term and long term memory comprises of complete episodes. Short term more 
         }
     ],
      "episode_summary": [""]
+  }
 }
 ```
 
@@ -340,7 +340,8 @@ The `episode_summary` is currently not filled, but will (as the name suggest) re
 Semantic memory returns extracted features of the profile.
 
 ```json
-"semantic_memory": [
+{
+  "semantic_memory": [
     {
     "set_id": "mem_session_testuser/project_v1",
     "category": "profile",
@@ -352,7 +353,7 @@ Semantic memory returns extracted features of the profile.
         "id": "3",
         "other": null
     }
-    }
+  }
 }
 ```
 
