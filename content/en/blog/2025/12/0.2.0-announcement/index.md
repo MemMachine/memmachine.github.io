@@ -62,8 +62,16 @@ The new **Client SDK** (`memmachine.rest_client`) allows you to integrate MemMac
 from memmachine import MemMachineClient
 
 client = MemMachineClient(base_url="http://localhost:8080")
-project = client.create_project(org_id="my_org", project_id="my_agent", description="Memory store for customer support agent")
-memory = project.memory(user_id="user123", agent_id="support_bot_01",session_id="session_555")
+project = client.create_project(
+    org_id="my_org", 
+    project_id="my_agent", 
+    description="Memory store for customer support agent"
+)
+memory = project.memory(
+    user_id="user123", 
+    agent_id="support_bot_01",
+    session_id="session_555"
+)
 
 # Add a memory
 memory.add(content="I am strictly vegetarian and I love spicy food.", role="user", metadata={"topic": "food_preference"})
