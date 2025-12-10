@@ -1,7 +1,7 @@
 ---
 title: "MemMachine v1 to v2 Transition Guide"
-date: 2025-12-08T09:22:00-08:00
-#featured_image: "featured_image2.jpg"
+date: 2025-12-11T09:22:00-08:00
+featured_image: "featured_image.jpg"
 tags: ["AI Agent", "Agent Memory", "featured"]
 author: "Christian Kniep"
 description: "This blog post explains the differences between the v1 and v2 API of MemMachine."
@@ -69,11 +69,7 @@ So far, so expected. MemMachine also extracts information from the `Derivatives`
 
 You can query both memory types using the RESTful API:
 
-<table>
-<tr>
-<td width="50%" valign="top">
-
-**Query**
+##### Query
 
 ```json
 {
@@ -90,10 +86,7 @@ You can query both memory types using the RESTful API:
 }
 ```
 
-</td>
-<td width="50%" valign="top">
-
-**Response**
+##### Response
 
 ```json
 {
@@ -107,17 +100,9 @@ You can query both memory types using the RESTful API:
 }
 ```
 
-</td>
-</tr>
-</table>
-
 The reponse is split into `episodic_memory` which represents the actuall messages and `profile_memory` with extracted features.
 
-<table>
-<tr>
-<td width="50%" valign="top">
-
-**Episodic**
+#### Episodic
 
 ```json
 [
@@ -139,10 +124,7 @@ The reponse is split into `episodic_memory` which represents the actuall message
 
 The two other lists in the episodic memory are unused. They where meant to represent short term memory and a summary (which we'll encounter in v2).
 
-</td>
-<td width="50%" valign="top">
-
-**Profile**
+#### Profile
 
 ```json
 [
@@ -167,10 +149,6 @@ The two other lists in the episodic memory are unused. They where meant to repre
 ]
 ```
 
-</td>
-</tr>
-</table>
-
 As you can see within the profile memory it is scored on how similar it is to the query (`What's up with Berlin?`). 
 
 ## v2 Flow
@@ -181,11 +159,7 @@ The new API version has a similar workflow with one big destinction. It introduc
 
 To group messages we're going to create a project (`POST /api/v2/projects`):
 
-<table>
-<tr>
-<td width="50%" valign="top">
-
-**Query**
+##### Query
 
 ```json
 {
@@ -199,10 +173,7 @@ To group messages we're going to create a project (`POST /api/v2/projects`):
 }
 ```
 
-</td>
-<td width="50%" valign="top">
-
-**Response**
+##### Response
 
 ```json
 {
@@ -215,10 +186,6 @@ To group messages we're going to create a project (`POST /api/v2/projects`):
   }
 }
 ```
-
-</td>
-</tr>
-</table>
 
 Listing a project serves the current projects (`POST /api/v2/projects/list`).
 
@@ -235,7 +202,7 @@ Listing a project serves the current projects (`POST /api/v2/projects/list`).
 
 Now that we have a project, we can add the same memories than above.
 
-```
+```json
 {
   "org_id": "testuser",
   "project_id": "project_v1",
@@ -266,12 +233,7 @@ The representation in Postgres shows the episodes...
 
 Searching for memories has improved in terms of how the query is structured and what the response is.
 
-<table>
-<tr>
-<td width="50%" valign="top">
-
-**Query**
-
+##### Query
 
 ```json
 {
@@ -284,10 +246,7 @@ Searching for memories has improved in terms of how the query is structured and 
 }
 ```
 
-</td>
-<td width="50%" valign="top">
-
-**Response**
+##### Response
 
 ```json
 {
@@ -304,10 +263,6 @@ Searching for memories has improved in terms of how the query is structured and 
   }
 }
 ```
-
-</td>
-</tr>
-</table>
 
 Slightly different from before, but more structed.
 
