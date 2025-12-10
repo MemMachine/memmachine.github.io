@@ -18,6 +18,7 @@ One major change to keep mind for Developers is that you need to create a projec
 
 Within the v1 API we organized the memories around sessions. When you added a memory you defined the following entities to capture important metadata around the message.  
 Let's use the following minimalistic request body towards `POST /v1/memories` as an example:
+
 ```json
 {
   "session": {
