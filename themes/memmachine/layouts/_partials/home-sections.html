@@ -7,28 +7,23 @@
       <div class="row">
         <div class="col-md-12">
           <h1 class="title">
-            Build <span>Agents that Learn,</span><br/>
+            Build <span>Agents that Learn,</span><br />
             With <span>Memory that Lasts.</span>
           </h1>
           <p class="text-center mx-850">
-            Meet MemMachine, an open-source memory layer for advanced AI agents.  It enables AI-powered applications to learn, store, and recall data and preferences from past sessions to enrich future interactions.  MemMachine's memory layer persists across multiple sessions, agents, and large language models, building a sophisticated, evolving user profile. It transforms AI chatbots into personalized, context-aware AI assistants designed to understand and respond with better precision and depth.
+            Meet MemMachine, an open-source memory layer for advanced AI agents. It enables AI-powered applications to
+            learn, store, and recall data and preferences from past sessions to enrich future interactions. MemMachine's
+            memory layer persists across multiple sessions, agents, and large language models, building a sophisticated,
+            evolving user profile. It transforms AI chatbots into personalized, context-aware AI assistants designed to
+            understand and respond with better precision and depth.
           </p>
           <div class="hero-btn">
             <div>
-              <a
-                href="https://docs.memmachine.ai/getting_started"
-                class="btn btn-primary mx-2"
-                >Start Building
+              <a href="https://docs.memmachine.ai/getting_started" class="btn btn-primary mx-2">Start Building
               </a>
-              <a
-                href="https://memmachine.ai/playground/"
-                class="btn btn-primary mx-2"
-                >Try the Playground
+              <a href="https://memmachine.ai/playground/" class="btn btn-primary mx-2">Try the Playground
               </a>
-              <a
-                href="https://discord.gg/usydANvKqD"
-                class="btn btn-primary mx-2"
-                >Let's Chat on Discord
+              <a href="https://discord.gg/usydANvKqD" class="btn btn-primary mx-2">Let's Chat on Discord
               </a>
             </div>
           </div>
@@ -37,11 +32,7 @@
           <div style="display:none;" class="hero-chat mx-850">
             <div class="hero-chat-list" id="chatList" style="height: 700px;"></div>
             <div class="hero-chat-input" id="chatInputContainer">
-              <input
-                type="text"
-                id="userInput"
-                placeholder="Type your message"
-              />
+              <input type="text" id="userInput" placeholder="Type your message" />
               <button id="sendButton">
                 <i class="fa-solid fa-paper-plane"></i>
               </button>
@@ -58,12 +49,17 @@
 <!--=======================================================
                           LOGO MARQUEE
   =========================================================-->
-{{  partial "logo-marquee.html" . }}
+{{ partial "logo-marquee.html" . }}
 
 <!--=======================================================
                           TESTIMONIALS
 =========================================================-->
 {{ partial "testimonials.html" }}
+
+<!--=======================================================
+                          FEATURED BLOG POSTS
+=========================================================-->
+{{ partial "featured-blogs.html" . }}
 
 <!--=======================================================
                           COMPARISON
@@ -79,11 +75,12 @@
         </div>
         <div class="col-md-12">
           <div class="solution-item">
-              <div>
+            <div>
               <div class="row mb-5">
                 <div class="col-md-8 mx-auto text-center">
                   <p class="mw-100 text-center">
-                    See how an agent with memory provides a compassionate, personalized healthcare experience, while one without creates frustration.
+                    See how an agent with memory provides a compassionate, personalized healthcare experience, while one
+                    without creates frustration.
                   </p>
                 </div>
               </div>
@@ -141,7 +138,9 @@
                         <div class="solution-chat-message-item-content">
                           <h3>MemMachine AI <span>10:14 AM</span></h3>
                           <p>
-                            Of course, Jane. Dr. Sharma has a 9:00 AM slot on Tuesday, but <strong>I remember you dislike morning appointments and find fasting difficult.</strong> Would you prefer an afternoon slot on Wednesday at 2:00 PM instead? That one doesn't require fasting.
+                            Of course, Jane. Dr. Sharma has a 9:00 AM slot on Tuesday, but <strong>I remember you
+                              dislike morning appointments and find fasting difficult.</strong> Would you prefer an
+                            afternoon slot on Wednesday at 2:00 PM instead? That one doesn't require fasting.
                           </p>
                         </div>
                       </div>
@@ -154,7 +153,9 @@
                 <div class="col-md-8 mx-auto text-center">
                   <h3 class="title-3">Memory is the <span>Key to Personalization</span></h3>
                   <p class="mw-100 text-center">
-                    A generic agent follows a script, ignoring a patient's personal needs and creating a sterile, one-size-fits-all experience. An agent powered by MemMachine remembers what makes each patient unique, allowing it to provide truly empathetic and personalized care.
+                    A generic agent follows a script, ignoring a patient's personal needs and creating a sterile,
+                    one-size-fits-all experience. An agent powered by MemMachine remembers what makes each patient
+                    unique, allowing it to provide truly empathetic and personalized care.
                   </p>
                 </div>
               </div>
@@ -188,7 +189,7 @@
               </div>
               <h3>Build Context-Aware Agents</h3>
               <p>
-                MemMachine allows your agents to retain and recall information 
+                MemMachine allows your agents to retain and recall information
                 across multiple sessions. They'll understand the full context of
                 a conversation, leading to more relevant, intelligent, and
                 human-like interactions.
@@ -204,9 +205,9 @@
               </div>
               <h3>Deliver True Personalization</h3>
               <p>
-                Our Personalization Memory lets agents remember key facts about 
-                their users. By recalling preferences, history, and important 
-                details, your agent can provide tailored responses that build 
+                Our Personalization Memory lets agents remember key facts about
+                their users. By recalling preferences, history, and important
+                details, your agent can provide tailored responses that build
                 trust and long-term engagement.
               </p>
             </div>
@@ -221,8 +222,8 @@
               <h3>Unlock Complex Workflows</h3>
               <p>
                 An agent with memory can manage complex, long-running tasks that
-                require remembering previous steps, user feedback, and evolving 
-                goals. From managing a CRM to assisting in a healthcare journey, 
+                require remembering previous steps, user feedback, and evolving
+                goals. From managing a CRM to assisting in a healthcare journey,
                 memory is the key to sophisticated automation.
               </p>
             </div>
@@ -251,13 +252,14 @@
           <div class="col-lg-6 mb-4 mb-lg-0">
             <div>
               <div class="solution-item-list h-100 d-flex justify-content-center align-items-center">
-                <img src="{{ `img/MemMachine_Architecture-Dark.png` | relURL }}" alt="MemMachine Architecture Diagram" class="img-fluid" loading='lazy'/>
+                <img src="{{ `img/MemMachine_Architecture-Dark.png` | relURL }}" alt="MemMachine Architecture Diagram"
+                  class="img-fluid" loading='lazy' />
               </div>
             </div>
           </div>
           <div class="col-lg-6">
             <div>
-              <div class="solution-item-list h-100"> 
+              <div class="solution-item-list h-100">
                 <div class="solution-single">
                   <div class="icon-circle">
                     <i class="fa-solid fa-1"></i>
@@ -265,7 +267,8 @@
                   <div>
                     <h4>Agents Interact via the API Layer</h4>
                     <p>
-                      Users interact with an agent, which connects to the MemMachine Memory core through a RESTful API, Python SDK, or MCP Server.
+                      Users interact with an agent, which connects to the MemMachine Memory core through a RESTful API,
+                      Python SDK, or MCP Server.
                     </p>
                   </div>
                 </div>
@@ -276,7 +279,8 @@
                   <div>
                     <h4>MemMachine Manages Memory</h4>
                     <p>
-                      MemMachine processes interactions and stores them in two distinct types: Episodic Memory for conversational context and Profile Memory for long-term user facts.
+                      MemMachine processes interactions and stores them in two distinct types: Episodic Memory for
+                      conversational context and Profile Memory for long-term user facts.
                     </p>
                   </div>
                 </div>
@@ -287,7 +291,8 @@
                   <div>
                     <h4>Data is Persisted to Databases</h4>
                     <p>
-                      Memory is persisted to a database layer where Episodic Memory is stored in a graph database and Profile Memory is stored in an SQL database.
+                      Memory is persisted to a database layer where Episodic Memory is stored in a graph database and
+                      Profile Memory is stored in an SQL database.
                     </p>
                   </div>
                 </div>
@@ -312,56 +317,58 @@
             Build Intelligent Solutions with <span>Agent Memory</span>
           </h2>
         </div>
-          <div class="solution-item">
-            <div>
-              <div class="row align-items-center">
-                <div class="col-md-6 pr-47">
-                  <h3>Build <span>Smart Agents</span> for Any Use Case</h3>
-                  <p>
-                    MemMachine's versatile memory architecture can be applied 
-                    across any domain, transforming generic bots into specialized, 
-                    expert assistants. Our growing list of examples showcases the
-                    endless possibilities of memory-powered agents that integrate
-                    into your own applications and solutions.
-                  </p>
-                  <a href="{{ "examples" | relLangURL }}" class="btn btn-secondary"
-                    >Explore Our Examples</a>
-                </div>
-                <div class="col-md-6 pl-47 mt-30">
-                  <div class="solution-item-list">
-                    <div class="solution-single">
-                      <img src="{{ `/img/check.svg` | relURL }}" alt="check" loading='lazy'/>
-                      <div>
-                        <h4>Your CRM Assistant</h4>
-                        <p>
-                          Your agent can recall a client's entire history and deal stage, proactively helping your sales team build relationships and close deals faster.
-                        </p>
-                      </div>
+        <div class="solution-item">
+          <div>
+            <div class="row align-items-center">
+              <div class="col-md-6 pr-47">
+                <h3>Build <span>Smart Agents</span> for Any Use Case</h3>
+                <p>
+                  MemMachine's versatile memory architecture can be applied
+                  across any domain, transforming generic bots into specialized,
+                  expert assistants. Our growing list of examples showcases the
+                  endless possibilities of memory-powered agents that integrate
+                  into your own applications and solutions.
+                </p>
+                <a href="{{ " examples" | relLangURL }}" class="btn btn-secondary">Explore Our Examples</a>
+              </div>
+              <div class="col-md-6 pl-47 mt-30">
+                <div class="solution-item-list">
+                  <div class="solution-single">
+                    <img src="{{ `/img/check.svg` | relURL }}" alt="check" loading='lazy' />
+                    <div>
+                      <h4>Your CRM Assistant</h4>
+                      <p>
+                        Your agent can recall a client's entire history and deal stage, proactively helping your sales
+                        team build relationships and close deals faster.
+                      </p>
                     </div>
-                    <div class="solution-single">
-                      <img src="{{ `/img/check.svg` | relURL }}" alt="check" loading='lazy'/>
-                      <div>
-                        <h4>A Healthcare Navigator</h4>
-                        <p>Offer continuous patient support with an agent that remembers medical history and tracks treatment progress to provide a seamless healthcare journey.</p>
-                      </div>
+                  </div>
+                  <div class="solution-single">
+                    <img src="{{ `/img/check.svg` | relURL }}" alt="check" loading='lazy' />
+                    <div>
+                      <h4>A Healthcare Navigator</h4>
+                      <p>Offer continuous patient support with an agent that remembers medical history and tracks
+                        treatment progress to provide a seamless healthcare journey.</p>
                     </div>
-                    <div class="solution-single">
-                      <img src="{{ `/img/check.svg` | relURL }}" alt="check" loading='lazy'/>
-                      <div>
-                        <h4>A Personal Finance Advisor</h4>
-                        <p>
-                          Your agent will remember a user's portfolio and risk tolerance, delivering personalized financial insights based on their complete history.
-                        </p>
-                      </div>
+                  </div>
+                  <div class="solution-single">
+                    <img src="{{ `/img/check.svg` | relURL }}" alt="check" loading='lazy' />
+                    <div>
+                      <h4>A Personal Finance Advisor</h4>
+                      <p>
+                        Your agent will remember a user's portfolio and risk tolerance, delivering personalized
+                        financial insights based on their complete history.
+                      </p>
                     </div>
-                    <div class="solution-single">
-                      <img src="{{ `/img/check.svg` | relURL }}" alt="check" loading='lazy'/>
-                      <div>
-                        <h4>A Content Writer</h4>
-                        <p>
-                          Build an assistant that remembers your unique style guide and terminology, ensuring perfect consistency across all documentation.
-                        </p>
-                      </div>
+                  </div>
+                  <div class="solution-single">
+                    <img src="{{ `/img/check.svg` | relURL }}" alt="check" loading='lazy' />
+                    <div>
+                      <h4>A Content Writer</h4>
+                      <p>
+                        Build an assistant that remembers your unique style guide and terminology, ensuring perfect
+                        consistency across all documentation.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -373,6 +380,7 @@
     </div>
   </div>
 </div>
+</div>
 
 <!--=======================================================
                           PRICING
@@ -383,11 +391,6 @@
                           FAQ
 =========================================================-->
 {{ partial "faq.html" . }}
-
-<!--=======================================================
-                          FEATURED BLOG POSTS
-=========================================================-->
-{{ partial "featured-blogs.html" . }}
 
 <!--=======================================================
                           READY TO BEGIN
