@@ -136,5 +136,3 @@ For clinical leaders, researchers, and trial sponsors: Qualitative Intelligence 
 For teams evaluating persistent memory infrastructure: Learn more or experiment with MemMachine's persistent AI memory infrastructure.
 
 **Jonathan Jiang** — [jon.jiang@memverge.com](mailto:jon.jiang@memverge.com) | [linkedin.com/in/jiang](https://linkedin.com/in/jiang)
-
-[memmachine.ai](https://memmachine.ai)
