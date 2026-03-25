@@ -9,6 +9,8 @@ description: "QIS × MemMachine — a methodology for integrating qualitative an
 
 ## The Clinical Trial Problem
 
+Written by: Marc Bulandr, Jonathan Jiang
+
 Ninety percent of drug trials fail.
 
 For every ten compounds that make it into human testing, nine are abandoned after the industry has burned through an average of $2.6 billion per eventual approval. The human cost runs deeper than the economics. Patients with rare diseases wait years for treatments that never arrive. Families watch their loved ones decline with nothing to offer but hope and time, and both run out.
@@ -38,6 +40,8 @@ Patients generate this data every day. Caregivers carry it home every night.
 ### Qualitative Intelligence Systems
 
 Better analytics got us this far. They will not get us the rest of the way. Closing the qualitative gap requires a framework designed to integrate, retain, and validate the full spectrum of patient data before conclusions harden into billion-dollar outcomes.
+
+![QIS](qis_diagram.png)
 
 Qualitative Intelligence Systems, or QIS, is a patent-pending methodology built for exactly this. It rests on three pillars.
 
@@ -86,6 +90,8 @@ A single model might confidently flag a patient as stable based on quantitative 
 **All three are engineering problems with engineering solutions.**
 ***And the first one, memory, is already being solved.***
 
+![Failures of current AI Clinical Intelligence Systems](bucket.png)
+
 ## The Memory Foundation: MemMachine
 
 The patient who told us everything in January, the one the AI forgot by April, needs a memory system built for the complexity of her actual life. Most AI memory systems were never designed for that.
@@ -108,6 +114,8 @@ In the patient synthesis workflow, this has an immediate impact. When aggregatin
 - **Human oversight is enabled.** Clinician review and annotations become part of the memory, creating an auditable trail.
 
 Because memory is portable and user-owned, the context that has been built, patient histories, clinical insights, and research connections, travels with the user as models evolve.
+
+![MemMachine](diagram.png)
 
 ## What Comes Next
 
