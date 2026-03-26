@@ -92,21 +92,21 @@ A single model might confidently flag a patient as stable based on quantitative 
 
 ![Failures of current AI Clinical Intelligence Systems](bucket.png)
 
-## The Memory Foundation: [MemMachine](https://memmachine.ai)
+## The Memory Foundation: MemMachine
 
 The patient who told us everything in January, the one the AI forgot by April, needs a memory system built for the complexity of her actual life. Most AI memory systems were never designed for that.
 
-[MemMachine](https://memmachine.ai) takes a different approach. It combines semantic and episodic memory stores to maintain both the meaning and the timeline of interactions. This dual-layer architecture enables portable, user-owned memory that works across any AI model, delivering measurable results: 92.5 percent accuracy on LoCoMo (Long-Term Conversational Memory), the highest benchmark score in the industry for long-context memory retrieval.
+MemMachine takes a different approach. It combines semantic and episodic memory stores to maintain both the meaning and the timeline of interactions. This dual-layer architecture enables portable, user-owned memory that works across any AI model, delivering measurable results: 92.5 percent accuracy on LoCoMo (Long-Term Conversational Memory), the highest benchmark score in the industry for long-context memory retrieval.
 
 ### How Semantic and Episodic Memory Work Together
 
 Traditional vector search reduces everything to static embeddings, losing the weight of a caregiver's concern, the significance of a social determinant, and the temporal context that matters in clinical decision-making. A patient's story from three months ago carries different clinical relevance than yesterday's lab results, but vector search treats them the same.
 
-[MemMachine](https://memmachine.ai)'s dual-store architecture addresses this directly. The semantic layer captures meaning and relationships across the entire knowledge base. The episodic layer preserves the when and the sequence: which consultation happened first, what changed over time, and how the patient's condition evolved. Together, they enable retrieval based on actual clinical relevance.
+MemMachine's dual-store architecture addresses this directly. The semantic layer captures meaning and relationships across the entire knowledge base. The episodic layer preserves the when and the sequence: which consultation happened first, what changed over time, and how the patient's condition evolved. Together, they enable retrieval based on actual clinical relevance.
 
 ### Real Workflow Applications
 
-In the patient synthesis workflow, this has an immediate impact. When aggregating data from multiple sources, electronic health records, research papers, and patient interviews, [MemMachine](https://memmachine.ai) ensures that:
+In the patient synthesis workflow, this has an immediate impact. When aggregating data from multiple sources, electronic health records, research papers, and patient interviews, MemMachine ensures that:
 
 - **Context persists across sessions.** Pick up exactly where you left off, even days later.
 - **Cross-model validation works.** Switch between Claude for analysis and GPT for differential diagnosis without losing accumulated context.
@@ -123,9 +123,9 @@ For decades, we lacked the infrastructure to capture what patients were telling 
 
 Clinical research does not lack data. It lacks memory and meaning.
 
-Methodology alone needs infrastructure to scale. Without persistent memory, qualitative insights remain transient observations that disappear between analyses. [MemMachine](https://memmachine.ai) provides the infrastructure needed to retain that context, combining semantic meaning with episodic timelines so that qualitative signals remain part of the analytical foundation over time.
+Methodology alone needs infrastructure to scale. Without persistent memory, qualitative insights remain transient observations that disappear between analyses. MemMachine provides the infrastructure needed to retain that context, combining semantic meaning with episodic timelines so that qualitative signals remain part of the analytical foundation over time.
 
-Together, QIS and [MemMachine](https://memmachine.ai) enable clinical research to move from isolated measurements to genuine understanding.
+Together, QIS and MemMachine enable clinical research to move from isolated measurements to genuine understanding.
 
 Some trials will still fail, but when the signals patients generate every day are captured, remembered, and integrated into analysis, the probability of insight changes, and with it, the potential to improve outcomes for the patients waiting for answers.
 
@@ -139,8 +139,8 @@ For clinical leaders, researchers, and trial sponsors: Qualitative Intelligence 
 
 **Marc Bulandr** — [mbulandr@gmail.com](mailto:mbulandr@gmail.com) | [linkedin.com/in/marcbulandr](https://linkedin.com/in/marcbulandr)
 
-### Explore [MemMachine](https://memmachine.ai)
+### Explore MemMachine
 
-For teams evaluating persistent memory infrastructure: Learn more or experiment with [MemMachine](https://memmachine.ai)'s persistent AI memory infrastructure.
+For teams evaluating persistent memory infrastructure: Learn more or experiment with MemMachine's persistent AI memory infrastructure.
 
 **Jonathan Jiang** — [jon.jiang@memverge.com](mailto:jon.jiang@memverge.com) | [linkedin.com/in/jiang](https://linkedin.com/in/jiang)
