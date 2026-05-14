@@ -4,7 +4,7 @@ This file configures Claude Code for this specific project. It supplements your 
 
 ## Project Summary
 
-This is the Hugo static website for [MemMachine](https://memmachine.ai/) — an open-source AI agent memory layer. The site is built with Hugo Extended ≥ 0.149.0, uses a custom `memmachine` theme, and deploys to GitHub Pages. See `AGENTS.md` for the full orientation guide.
+This is the Hugo static website for [MemMachine](https://memmachine.ai/) — an open-source AI agent memory layer. The site is built with Hugo Extended ≥ 0.161.1, uses a custom `memmachine` theme, and deploys to GitHub Pages. See `AGENTS.md` for the full orientation guide.
 
 ## Critical Rules
 
@@ -58,7 +58,7 @@ If the build fails, investigate and fix before committing. Never commit with a b
 
 ## Hugo Version
 
-Minimum: **0.149.0 Extended**. The Extended edition is required for Sass/SCSS support. Standard Hugo will fail at build time.
+Minimum: **0.161.1 Extended**. The Extended edition is required for Sass/SCSS support. Standard Hugo will fail at build time.
 
 ## Git Remotes
 

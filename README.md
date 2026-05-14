@@ -19,13 +19,13 @@ This repository contains the source code and content for the MemMachine website,
 
 ### Prerequisites
 
-- [Hugo](https://gohugo.io/getting-started/installing/) **Extended** edition, version 0.149.0 or newer (the Extended edition is required for Sass support)
-- [Go](https://go.dev/dl/) 1.25.0 or newer (Hugo module dependency)
+- [Hugo](https://gohugo.io/getting-started/installing/) **Extended** edition, version 0.161.1 or newer (the Extended edition is required for Sass support)
+- [Go](https://go.dev/dl/) 1.26.3 or newer (Hugo module dependency)
 - [Node.js](https://nodejs.org/) 22.x or newer (for asset building)
 
 ### Installation
 
-1. Install Hugo **Extended** (version 0.149.0 or newer):
+1. Install Hugo **Extended** (version 0.161.1 or newer):
 
    See the [official Hugo installation guide](https://gohugo.io/getting-started/installing/) for your platform, or use Homebrew (macOS/Linux):
 
@@ -40,7 +40,7 @@ This repository contains the source code and content for the MemMachine website,
 
    ```bash
    hugo version
-   # Should show: hugo v0.149.0+extended ...
+   # Should show: hugo v0.161.1+extended ...
    ```
 
 2. Install Go (required as a Hugo module dependency):
