@@ -29,7 +29,7 @@ If any of the following are not provided in the invocation arguments, ask for th
 | **author** | Yes | Author's full name as it should appear on the post |
 | **description** | Yes | One sentence for SEO and social preview cards |
 | **tags** | Yes | Comma-separated list (e.g., "AI Agent, Integration, LLM"). Always include at least one. |
-| **date** | Yes | Publish date in `YYYY-MM-DD` format. Defaults to today if not provided. |
+| **date** | Yes | Publish date in `YYYY-MM-DD` format. Defaults to today if not provided. **Must not be in the future** — Hugo silently suppresses future-dated posts at build time unless `--buildFuture` is passed. If the post won't appear, check the date first. |
 | **featured** | No | Should this post appear in the homepage carousel? (add tag `"featured"`) |
 
 ### Step 2 — Derive the slug and path
@@ -60,6 +60,8 @@ YYYY-MM-DDTHH:MM:SS-07:00   # Pacific Daylight Time (summer)
 ```
 Default time: `09:00:00` (9 AM).
 
+> **Date gotcha:** Hugo silently drops any post whose `date` is in the future — it will not appear in the local server or the deployed site. Always use today's date or a past date. If you do not know the current date, ask the user before writing the file.
+
 ### Step 4 — Build the tags array
 
 Start with the user-provided tags. Clean each tag:
@@ -87,11 +89,12 @@ draft: false
   Replace this comment with your blog post content.
   
   BEFORE PUBLISHING:
-  1. Add featured_image.png to this directory (same folder as this index.md)
-  2. Set draft: false in the frontmatter above
-  3. Preview: hugo server --buildDrafts --bind 0.0.0.0
-  4. Build check: hugo --gc --minify
-  5. Commit with signed commit: git commit -sS -m "Add blog: {title}"
+  1. Confirm the date above is today or in the past — Hugo silently hides future-dated posts
+  2. Add featured_image.png to this directory (same folder as this index.md)
+  3. Set draft: false in the frontmatter above
+  4. Preview: hugo server --buildDrafts --bind 0.0.0.0
+  5. Build check: hugo --gc --minify
+  6. Commit with signed commit: git commit -sS -m "Add blog: {title}"
 -->
 ```
 

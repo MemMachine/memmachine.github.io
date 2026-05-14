@@ -14,12 +14,13 @@ This repository is the source for [memmachine.ai](https://memmachine.ai/), the p
 
 | Component | Version | Notes |
 |-----------|---------|-------|
-| Hugo | ≥ 0.149.0 **Extended** | Must be Extended edition (Sass support) |
-| Go | ≥ 1.25.0 | Hugo module dependency |
-| Node.js | ≥ 22.x | PostCSS / Autoprefixer |
+| Hugo | ≥ 0.149.0 **Extended** | Must be Extended edition (Sass support); pinned via `HUGO_VERSION` in workflow |
+| Dart Sass | 1.91.0 | CSS compilation; pinned via `DART_SASS_VERSION` in workflow |
+| Go | ≥ 1.25.0 | Hugo module dependency; pinned via `GO_VERSION` in workflow |
+| Node.js | ≥ 22.x | PostCSS / Autoprefixer; pinned via `NODE_VERSION` in workflow |
 | npm | bundled with Node.js | Dependency management |
 | Theme | `memmachine` (custom) | Lives in `themes/memmachine/` |
-| Deployment | GitHub Pages | Via `.github/workflows/hugo.yaml` |
+| Deployment | GitHub Pages | Push to `main` → GitHub Actions → Pages (automatic) |
 
 ---
 
@@ -169,7 +170,18 @@ The `memmachine` theme is fully custom (not a Hugo community theme). It uses:
 
 File: `.github/workflows/hugo.yaml`
 
-Triggers on: push to `main` branch, or manual workflow dispatch.
+Triggers on: push to `main` branch, or manual workflow dispatch. **Merging a PR to `main` is the deploy** — there is no separate deploy step.
+
+All tool versions are pinned as `env:` vars at the top of the `build` job:
+
+| Variable | Current value |
+|----------|--------------|
+| `HUGO_VERSION` | `0.149.0` |
+| `DART_SASS_VERSION` | `1.91.0` |
+| `GO_VERSION` | `1.25.0` |
+| `NODE_VERSION` | `22.18.0` |
+
+To upgrade any tool, edit its variable and push. The download URLs in the workflow derive the version from these vars automatically.
 
 Steps:
 1. Checkout (with submodules, full history)

@@ -17,6 +17,24 @@ Perform maintenance tasks on the MemMachine website repository. Subcommands hand
 /hugo-chores update-npm         # audit and update npm dependencies
 ```
 
+## Deployment Model
+
+The site deploys automatically. Every push to `main` triggers the GitHub Actions workflow at `.github/workflows/hugo.yaml`, which builds the site with Hugo and deploys the output to GitHub Pages. There is no manual deploy step — merging a PR to `main` is the deploy.
+
+**All tool versions are pinned as `env:` vars at the top of that workflow file:**
+
+```yaml
+env:
+  DART_SASS_VERSION: 1.91.0
+  GO_VERSION: 1.25.0
+  HUGO_VERSION: 0.149.0
+  NODE_VERSION: 22.18.0
+```
+
+To upgrade any tool, edit the corresponding env var in `.github/workflows/hugo.yaml` and push to main.
+
+---
+
 ## What You Must Do When Invoked
 
 If no subcommand is given, print the usage above and list the available subcommands with one-line descriptions. Do not run any commands.
@@ -54,11 +72,10 @@ If the latest is newer, proceed.
 
 ### Step 4 — Update the workflow file
 
-In `.github/workflows/hugo.yaml`, find the Hugo installation step. Update the version string from the old version to the new version. Use the Edit tool for a targeted replacement.
+In `.github/workflows/hugo.yaml`, update the `HUGO_VERSION` env var at the top of the `build` job. Use the Edit tool for a targeted replacement.
 
-Common patterns to update:
-- `extended_0.149.0` → `extended_{new_version}` (without the leading `v`)
-- `HUGO_VERSION: '0.149.0'` → `HUGO_VERSION: '{new_version}'`
+The exact line to change (no quotes around the version):
+- `HUGO_VERSION: 0.149.0` → `HUGO_VERSION: {new_version}` (without a leading `v`)
 
 ### Step 5 — Update documentation
 

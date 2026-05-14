@@ -75,7 +75,7 @@ draft: true
 | Field | Type | Required | Notes |
 |-------|------|----------|-------|
 | `title` | string | Yes | Full title, used in `<h1>`, og:title, and blog card |
-| `date` | RFC 3339 | Yes | ISO 8601 with timezone offset, e.g. `2026-04-27T09:00:00-08:00` |
+| `date` | RFC 3339 | Yes | ISO 8601 with timezone offset, e.g. `2026-04-27T09:00:00-08:00`. **Must be today or in the past.** Hugo silently suppresses future-dated posts — they will not appear in local preview or the deployed site unless `--buildFuture` is passed. |
 | `featured_image` | string | Yes | Filename only (not path); file must be in the same directory as `index.md` |
 | `tags` | string array | Yes | Used for taxonomy pages; include `"featured"` to appear in homepage carousel |
 | `author` | string | Yes | Full name as it should appear on the post |
@@ -97,10 +97,13 @@ Common existing tags: `"AI Agent"`, `"AI Memory"`, `"Generative AI"`, `"LLM"`, `
 ### Publishing
 
 When the post is ready:
-1. Set `draft: false` in frontmatter.
-2. Build and preview locally: `hugo server --buildDrafts` → `hugo server`
-3. Commit with a signed commit: `git commit -sS -m "Add blog: Post Title"`
-4. Open a pull request against the upstream `main` branch.
+1. Confirm `date` is today or in the past — a future date silently prevents the post from appearing.
+2. Set `draft: false` in frontmatter.
+3. Build and preview locally: `hugo server --buildDrafts` → `hugo server` (no drafts flag confirms the post is visible).
+4. Commit with a signed commit: `git commit -sS -m "Add blog: Post Title"`
+5. Open a pull request against the upstream `main` branch.
+
+> **If a post is missing after publish:** Check `date` first. Hugo drops future-dated content without any warning. Use `hugo server --buildFuture` to temporarily reveal them during debugging.
 
 ---
 
