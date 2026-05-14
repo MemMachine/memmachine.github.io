@@ -267,6 +267,6 @@ Strong conversational memory enables AI agents to handle multi-session, time-awa
 Efficient token usage reduces operational costs and latency, enabling longer, more complex agent interactions—critical for scalable deployments.
 
 ### Where can I learn more or try MemMachine?
-Visit [MemMachine.ai](https://memmachine.ai/) to download MemMachine and see for yourself why it's state-of-the-art. You'll find documentation, use cases, examples, the playground, and a growing community of developers using MemMachine in our Discord server.
+Visit [MemMachine.ai](https://memmachine.ai/) to download MemMachine and see for yourself why it's state-of-the-art. You'll find documentation, use cases, examples, and a growing community of developers using MemMachine in our Discord server.
 
 

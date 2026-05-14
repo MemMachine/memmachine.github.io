@@ -91,11 +91,6 @@ tags = 'tags'
     url = 'https://docs.memmachine.ai'
     weight = 70
 
-  [[menus.main]]
-    name = 'Playground'
-    pageRef = '/playground'
-    weight = 80
-
   # Social media links for the top nav
   [[menus.social]]
     name = "Discord"
@@ -131,11 +126,6 @@ tags = 'tags'
     name = 'Docs'
     url = 'https://docs.memmachine.ai'
     weight = 40  
-
-  [[menus.footerProduct]]
-    name = 'Playground'
-    pageRef = '/playground'
-    weight = 50  
 
   # Footer Company menu
   [[menus.footerCompany]]

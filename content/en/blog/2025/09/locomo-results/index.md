@@ -115,7 +115,6 @@ Our philosophy is simple: we're not just trying to win at a benchmark; we're str
 If our vision for a more intelligent and reliable agent resonates with you, we'd love for you to try it, tweak it, or challenge it.
 
 - [Explore the code on GitHub](https://github.com/MemMachine/MemMachine)
-- Try it live in our [Playground](https://memmachine.ai/playground)
 - Check out our [website,](https://memmachine.ai) where you'll find use cases, examples, and more.
 - Join the conversation on our [Discord Server](https://discord.gg/usydANvKqD). Ask questions, share your projects, and connect with other developers.
 
