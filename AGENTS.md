@@ -14,9 +14,9 @@ This repository is the source for [memmachine.ai](https://memmachine.ai/), the p
 
 | Component | Version | Notes |
 |-----------|---------|-------|
-| Hugo | ≥ 0.149.0 **Extended** | Must be Extended edition (Sass support); pinned via `HUGO_VERSION` in workflow |
-| Dart Sass | 1.91.0 | CSS compilation; pinned via `DART_SASS_VERSION` in workflow |
-| Go | ≥ 1.25.0 | Hugo module dependency; pinned via `GO_VERSION` in workflow |
+| Hugo | ≥ 0.161.1 **Extended** | Must be Extended edition (Sass support); pinned via `HUGO_VERSION` in workflow |
+| Dart Sass | 1.99.0 | CSS compilation; pinned via `DART_SASS_VERSION` in workflow |
+| Go | ≥ 1.26.3 | Hugo module dependency; pinned via `GO_VERSION` in workflow |
 | Node.js | ≥ 22.x | PostCSS / Autoprefixer; pinned via `NODE_VERSION` in workflow |
 | npm | bundled with Node.js | Dependency management |
 | Theme | `memmachine` (custom) | Lives in `themes/memmachine/` |
@@ -90,7 +90,7 @@ brew install hugo
 
 # Verify Extended edition and correct version
 hugo version
-# Expected: hugo v0.149.0+extended ...
+# Expected: hugo v0.161.1+extended ...
 
 # 2. Install Go (Hugo module dependency)
 #    Download from https://go.dev/dl/ or use your package manager
@@ -176,10 +176,10 @@ All tool versions are pinned as `env:` vars at the top of the `build` job:
 
 | Variable | Current value |
 |----------|--------------|
-| `HUGO_VERSION` | `0.149.0` |
-| `DART_SASS_VERSION` | `1.91.0` |
-| `GO_VERSION` | `1.25.0` |
-| `NODE_VERSION` | `22.18.0` |
+| `HUGO_VERSION` | `0.161.1` |
+| `DART_SASS_VERSION` | `1.99.0` |
+| `GO_VERSION` | `1.26.3` |
+| `NODE_VERSION` | `22.22.3` |
 
 To upgrade any tool, edit its variable and push. The download URLs in the workflow derive the version from these vars automatically.
 
