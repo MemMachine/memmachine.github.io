@@ -1,61 +1,14 @@
 {{ define "main" }}
-  <!--=======================================================
-                        HERO
-  =========================================================-->
-  <div class="hero-area">
-    <div class="container">
-      <div>
-        <div class="row">
-          <div class="col-md-12">
-            <h1 class="title">
-              {{ .Title }}
-            </h1>
-            <p class="mx-850 text-center">
-              {{ .Params.description }}
-            </p>
-          </div>
+<div class="policy-area mt-30">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="legal-content">
+          <h1>{{ .Title }}</h1>
+          {{ .Content }}
         </div>
       </div>
     </div>
   </div>
-  <!--=======================================================
-                          POLICY
-  =========================================================-->
-  <div class="policy-area mt-192">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="pills-tab" role="tablist" aria-orientation="vertical">
-            {{ range $index, $section := .Params.policy_sections }}
-              <button
-                class="nav-link {{ if eq $index 0 }}active{{ end }}"
-                data-bs-toggle="pill"
-                data-bs-target="#pill-{{ $index }}"
-              >
-                {{ $section.title }}
-              </button>
-            {{ end }}
-          </div>
-        </div>
-        <div class="col-md-8">
-          <div class="tab-content">
-            {{ range $index, $section := .Params.policy_sections }}
-              <div
-                class="tab-pane fade {{ if eq $index 0 }}show active{{ end }}"
-                id="pill-{{ $index }}"
-                role="tabpanel"
-              >
-                <h3>
-                  {{ $section.title }}
-                </h3>
-                <div>
-                  {{ $section.content | safeHTML }}
-                </div>
-              </div>
-            {{ end }}
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+</div>
 {{ end }}

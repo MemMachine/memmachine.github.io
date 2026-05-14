@@ -1,0 +1,6 @@
+{{- $level := or (.Get 0) "1" -}}
+<div class="legal-indent legal-indent-{{ $level }}">
+
+{{ .Inner }}
+
+</div>

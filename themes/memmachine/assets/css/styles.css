@@ -200,6 +200,18 @@ input::placeholder {
   margin-top: 192px;
 }
 
+.mt-90 {
+  margin-top: 90px;
+}
+
+.mt-60 {
+  margin-top: 60px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
 .mb-192 {
   margin-bottom: 192px;
 }
@@ -1093,47 +1105,39 @@ h2.accordion-header button,
 }
 
 /* ======================================
- *  11. Policy
+ *  11. Policy / Legal documents
 /* ====================================== */
-.policy-area .pills-tab {
-  display: grid;
-  justify-content: flex-start;
-  gap: 20px;
+.policy-area .legal-content {
+  max-width: 960px;
+  margin: 0 auto;
 }
 
-.policy-area .pills-tab button {
-  text-align: left;
-  color: #363659;
-  font-size: 20px;
-  padding-left: 15px;
+.policy-area .legal-content h1 {
+  font-size: 36px;
+  margin-bottom: 32px;
 }
 
-.policy-area .pills-tab button.active {
-  background: var(--gradient-lavender-pink-peach);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  border-left: 4px solid #a570ff;
-}
-
-.policy-area .tab-content {
-  border-left: 1px solid #1f1f33;
-  padding-left: 58px;
-}
-
-.policy-area .tab-content h3 {
-  border-top: 1px solid #1f1f33;
-  padding-top: 45px;
-  margin-top: 45px;
+.policy-area .legal-content h2 {
   font-size: 24px;
-  color: #c0c0d8;
-  margin-bottom: 25px;
+  margin-top: 40px;
+  margin-bottom: 16px;
 }
 
-.policy-area .tab-content h3:first-child {
-  border-top: none;
-  margin-top: 0;
-  padding-top: 0;
+.policy-area .legal-content p {
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.policy-area .legal-indent-1 {
+  padding-left: 1.5rem;
+}
+
+.policy-area .legal-indent-2 {
+  padding-left: 3rem;
+}
+
+.policy-area .legal-indent-3 {
+  padding-left: 4.5rem;
 }
 
 /* ======================================
@@ -1696,10 +1700,21 @@ footer p {
     font-size: 38px;
   }
 
-  .policy-area .tab-content {
-    border-left: none;
+  .policy-area .legal-content {
     padding-left: 0;
-    margin-top: 50px;
+    padding-right: 0;
+  }
+
+  .policy-area .legal-indent-1 {
+    padding-left: 1rem;
+  }
+
+  .policy-area .legal-indent-2 {
+    padding-left: 2rem;
+  }
+
+  .policy-area .legal-indent-3 {
+    padding-left: 3rem;
   }
 
   .contact-brand {
