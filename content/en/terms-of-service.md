@@ -1,6 +1,6 @@
 ---
 title: "Terms of Service"
-date: 2026-05-14T21:21:00-06:00
+date: 2026-05-14T12:00:00-06:00
 layout: "privacy-policy"
 draft: false
 ---
