@@ -19,12 +19,13 @@ This repository contains the source code and content for the MemMachine website,
 
 ### Prerequisites
 
-- [Hugo](https://gohugo.io/getting-started/installing/) (version 0.148.2 or newer)
-- [Node.js](https://nodejs.org/) (for asset building)
+- [Hugo](https://gohugo.io/getting-started/installing/) **Extended** edition, version 0.149.0 or newer (the Extended edition is required for Sass support)
+- [Go](https://go.dev/dl/) 1.25.0 or newer (Hugo module dependency)
+- [Node.js](https://nodejs.org/) 22.x or newer (for asset building)
 
 ### Installation
 
-1. Install Hugo (version 0.148.2 or newer):
+1. Install Hugo **Extended** (version 0.149.0 or newer):
 
    See the [official Hugo installation guide](https://gohugo.io/getting-started/installing/) for your platform, or use Homebrew (macOS/Linux):
 
@@ -35,21 +36,25 @@ This repository contains the source code and content for the MemMachine website,
    # Or, download from https://github.com/gohugoio/hugo/releases
    ```
 
-   To verify your Hugo version:
+   To verify your Hugo version (must show `extended`):
 
    ```bash
    hugo version
-   # Should be 0.148.2 or newer
+   # Should show: hugo v0.149.0+extended ...
    ```
 
-2. Clone the repository:
+2. Install Go (required as a Hugo module dependency):
+
+   Download from [go.dev/dl](https://go.dev/dl/) or use your system package manager.
+
+3. Clone the repository:
 
    ```bash
    git clone https://github.com/sscaragal/memmachine.github.io.git
    cd memmachine.github.io
    ```
 
-3. Install Node.js dependencies:
+4. Install Node.js dependencies:
 
    ```bash
    npm install
@@ -65,19 +70,39 @@ hugo server
 
 Visit [http://localhost:1313](http://localhost:1313) to view the site.
 
+To bind to all network interfaces (use this in remote development environments, devcontainers, or cloud VMs):
+
+```bash
+hugo server --bind 0.0.0.0
+```
+
+Then open `http://<your-server-ip>:1313` in your browser.
+
+To preview draft content (new blog posts start as drafts):
+
+```bash
+hugo server --buildDrafts
+```
+
 ### Building the Site
 
 To build the static site for production:
 
 ```bash
-hugo
+hugo --gc --minify
 ```
 
 The output will be in the `public/` directory.
 
 ## Contributing
 
-Pull requests and issues are welcome! Please follow the [Hugo documentation](https://gohugo.io/documentation/) for content and theme changes.
+Pull requests and issues are welcome! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
+
+**All commits must be signed.** Use `git commit -sS` (both `-s` for Signed-off-by and `-S` for GPG signing).
+
+## For AI Agents
+
+If you are an AI coding assistant (Claude, CodeX, Gemini, etc.), read [AGENTS.md](./AGENTS.md) for a complete orientation: tech stack, directory structure, build commands, content conventions, and critical constraints.
 
 ## License
 
