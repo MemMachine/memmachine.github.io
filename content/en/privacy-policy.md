@@ -1,12 +1,12 @@
 ---
 title: "Privacy Policy"
-date: 2026-05-21T12:00:00-06:00
+date: 2026-05-20T12:00:00-06:00
 draft: false
 layout: "privacy-policy"
 description: "This Privacy Policy describes how MemMachine collects, uses, and shares information about you and explains the choices you have with respect to that information."
 ---
 
-Last updated: May 31st, 2026
+Last updated: May 20th, 2026
 
 Welcome to <https://memmachine.ai/> ("**Site**"), a website owned and operated by MemVerge, Inc., a Delaware corporation, ("**MemVerge**," "**we**," "**us**" or "**our**"). This Privacy Policy explains how we collect, use, share and protect personal information (used interchangeably with personal data) processed in relation to the Site and the services, including our products, e.g., Memory Machine Cloud Edition, MemoryViewer, MemMachine.AI, and CXL ("**Services**") (collectively, "**Platform**") and other interactions (e.g., customer service inquiries, social media etc.) that you may have with MemVerge. It also tells you about your choices with respect to our collection, use and disclosure of your personal information.
 
