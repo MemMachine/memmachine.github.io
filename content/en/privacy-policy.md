@@ -93,7 +93,7 @@ We (and certain authorized third parties) use cookies and similar technologies i
 
 ## Social Media
 
-MemVerge has a presence on some social media platforms, including Twitter, Facebook, YouTube and LinkedIn. Through our accounts on social medial platforms, we may in some instances collect personal information when you interact with our accounts or otherwise communicate with us through those accounts. Any information that you post on social media is governed by each social platform's privacy notices, and any personal information that we collect via our social media accounts will be processed in accordance with this Privacy Policy.
+MemVerge has a presence on some social media platforms, including X, Facebook, YouTube and LinkedIn. Through our accounts on social medial platforms, we may in some instances collect personal information when you interact with our accounts or otherwise communicate with us through those accounts. Any information that you post on social media is governed by each social platform's privacy notices, and any personal information that we collect via our social media accounts will be processed in accordance with this Privacy Policy.
 
 More information as regards our legal relationship with some of those social media platforms is available [here](#_Social_Media_and) for users in the EEA and the U.K.
 
@@ -336,7 +336,7 @@ We will respond to all legitimate requests within one (1) month. Occasionally it
 
 ### Social Media and Joint Controllership for Individuals in the EEA
 
-Sometimes, MemVerge acts as a 'joint controller' with certain third parties, namely certain social media sites, such as Facebook, LinkedIn, Twitter, and YouTube. When MemVerge and a partner act as joint controllers, you (as a data subject) may exercise your rights against MemVerge and/or the third party. See below for our joint transfer addendums with such sites.
+Sometimes, MemVerge acts as a 'joint controller' with certain third parties, namely certain social media sites, such as Facebook, LinkedIn, X, and YouTube. When MemVerge and a partner act as joint controllers, you (as a data subject) may exercise your rights against MemVerge and/or the third party. See below for our joint transfer addendums with such sites.
 
 ### Facebook
 
@@ -354,7 +354,7 @@ It cannot be excluded that some processing by Facebook Ireland Ltd. will also ta
 
 _X.com_
 
-With respect to our X.com, formally Twitter, page, we are joint controllers of your personal data with X. You may find the joint controller addendum at <https://gdpr.twitter.com/en/controller-to-controller-transfers.html>.
+With respect to our X.com page, we are joint controllers of your personal data with X. You may find the joint controller addendum at <https://gdpr.x.com/en/controller-to-controller-transfers.html>.
 
 _YouTube_
 
