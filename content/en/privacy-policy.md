@@ -55,7 +55,7 @@ We collect the following categories of personal information:
 - **Commercial information**, such as records of products purchased, obtained, or considered, or other purchasing or consuming histories or tendencies
 - **Payment Data**, such as payment card type, last four digits of your credit or debit card number, billing address, phone number, and email
 - **Internet or other similar network activity**, such as browsing history or information on a user's interaction with a website or application
-- **\[Geolocation data\]**
+- **Geolocation data**
 - **Professional or employment-related information,** such as Customer contact data
 - **Content of communications**
 - **Inferences drawn from other personal information**, such as profile information reflecting a person's preferences
@@ -93,7 +93,7 @@ We (and certain authorized third parties) use cookies and similar technologies i
 
 ## Social Media
 
-MemVerge has a presence on some social media platforms, including X, Facebook, YouTube and LinkedIn. Through our accounts on social medial platforms, we may in some instances collect personal information when you interact with our accounts or otherwise communicate with us through those accounts. Any information that you post on social media is governed by each social platform's privacy notices, and any personal information that we collect via our social media accounts will be processed in accordance with this Privacy Policy.
+MemVerge has a presence on some social media platforms, including X, Facebook, YouTube and LinkedIn. Through our accounts on social media platforms, we may, in some instances, collect personal information when you interact with our accounts or otherwise communicate with us through those accounts. Any information that you post on social media is governed by each social platform's privacy notices, and any personal information that we collect via our social media accounts will be processed in accordance with this Privacy Policy.
 
 More information as regards our legal relationship with some of those social media platforms is available [here](#_Social_Media_and) for users in the EEA and the U.K.
 
@@ -244,7 +244,7 @@ If you are a California resident, you may have certain rights with respect to yo
 
 _Selling or Sharing of Your Personal Information_
 
-The CCPA defines "sale" as the transfer of personal information for monetary or other valuable consideration. Although we do not "sell" personal information as that term may be commonly interpreted, we engage in online activities that may constitute a sale or a share (for behavioral advertising) of personal information under California law. This may include showing you targeted or customized advertisements on other websites. You may opt out of the selling or sharing of your personal information by clicking \[ \]. We do not knowingly "sell" or "share" the personal information of consumers under 16 years of age.
+The CCPA defines "sale" as the transfer of personal information for monetary or other valuable consideration. Although we do not "sell" personal information as that term may be commonly interpreted, we engage in online activities that may constitute a sale or a share (for behavioral advertising) of personal information under California law. This may include showing you targeted or customized advertisements on other websites. You may opt out of the selling or sharing of your personal information. We do not knowingly "sell" or "share" the personal information of consumers under 16 years of age.
 
 _Shine The Light Law_
 
@@ -252,7 +252,7 @@ If you are a California resident and have an established business relationship w
 
 _State Privacy Rights_
 
-A number of US states may provide their residents with certain privacy rights. Depending on how the applicable privacy law defines a "sale," we may sell personal information to third parties. For instance, if you are a resident of Texas, Colorado or Connecticut, our use of cookies and tracking technologies constitutes a sale of personal information to third-party advertisers. We also use cookies to display advertisements about our products to you on nonaffiliated websites, applications, and online services. This is "targeted advertising" under applicable privacy laws.
+A number of US states may provide their residents with certain privacy rights. Depending on how the applicable privacy law defines a "sale," we may sell personal information to third parties. For instance, if you are a resident of Texas, Colorado or Connecticut, our use of cookies and tracking technologies constitutes a sale of personal information to third-party advertisers. We also use cookies to display advertisements about our products to you on non-affiliated websites, applications, and online services. This is "targeted advertising" under applicable privacy laws.
 
 - Whether we are processing your personal information, access to that information and to receive a copy of your personal information.
 - Correction of your personal information that is inaccurate.
