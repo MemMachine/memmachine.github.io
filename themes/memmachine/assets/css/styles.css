@@ -1128,6 +1128,31 @@ h2.accordion-header button,
   line-height: 1.6;
 }
 
+.policy-area .legal-content ul,
+.policy-area .legal-content ol {
+  padding-left: 2rem;
+  margin: 16px 0;
+}
+
+.policy-area .legal-content ul li {
+  list-style-type: disc;
+  margin-bottom: 8px;
+}
+
+.policy-area .legal-content ol li {
+  list-style-type: decimal;
+  margin-bottom: 8px;
+}
+
+.policy-area .legal-content ul ul,
+.policy-area .legal-content ol ol {
+  margin: 8px 0;
+}
+
+.policy-area .legal-content ul ul li {
+  list-style-type: circle;
+}
+
 .policy-area .legal-indent-1 {
   padding-left: 1.5rem;
 }
